@@ -1,0 +1,30 @@
+.wrapper {
+	display: flex;
+	flex-direction: column;
+}
+
+.main {
+	flex-grow: 1;
+	min-height: 100vh;
+}
+
+.footer {
+	flex-shrink: 0;
+}
+
+.petrophysics {
+	position: relative;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	min-height: 300rem;
+}
+
+.background {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}

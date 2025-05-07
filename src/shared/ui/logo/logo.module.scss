@@ -1,0 +1,10 @@
+.logo {
+	width: 218rem;
+	height: 37rem;
+}
+
+@media (width <= 1200px) {
+	.logo {
+		width: auto;
+	}
+}

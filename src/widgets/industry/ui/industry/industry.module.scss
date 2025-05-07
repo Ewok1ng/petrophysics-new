@@ -1,0 +1,175 @@
+.industry {
+	padding: 15rem 0;
+	background: $white-color;
+
+	&__background {
+		position: absolute;
+		inset: 0;
+
+		opacity: 0;
+		background-repeat: no-repeat;
+		background-size: cover;
+
+		transition: opacity 0.7s ease-in-out;
+
+		&--kfu {
+			background-image: url('../../../../shared/assets/images/industry/kfu.jpg');
+			background-position-y: 25%;
+		}
+
+		&--agi {
+			background-image: url('../../../../shared/assets/images/industry/agi.jpg');
+			background-position-y: 92%;
+		}
+	}
+
+	&__title,
+	&__subtitle {
+		font-size: 75rem;
+		font-weight: 400;
+		color: $black-color;
+		text-align: left;
+		text-transform: uppercase;
+	}
+
+	&__title {
+		flex: 1 0 965rem;
+		margin: 25rem 0;
+	}
+
+	&__subtitle {
+		max-width: 900rem;
+		text-align: right;
+		opacity: 1;
+		transition: opacity 0.5s ease-in-out;
+	}
+
+	&__row {
+		position: relative;
+		border-top: 1rem solid $black-color;
+
+		&:last-child {
+			border-bottom: 1rem solid $black-color;
+		}
+
+		&:hover {
+			.industry__background {
+				opacity: 1;
+			}
+
+			.industry__subtitle {
+				opacity: 0;
+			}
+		}
+	}
+
+	&__row_inner {
+		position: relative;
+		z-index: 100;
+
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		&--content {
+			cursor: pointer;
+			height: 252rem;
+		}
+	}
+
+	&__description {
+		flex: 0 1 auto;
+		font-size: 16rem;
+	}
+
+	&__icons {
+		display: flex;
+		gap: 100rem;
+		align-items: center;
+	}
+
+	&__icon {
+		&--kfu {
+			width: 300rem;
+			height: 98rem;
+		}
+
+		&--agi {
+			width: 222rem;
+			height: 75rem;
+		}
+
+		&--geomodel {
+			width: 378rem;
+			height: 75rem;
+		}
+	}
+}
+
+@media (width <= 1200px) {
+	.industry__title {
+		flex: 1 0 70%;
+		font-size: 60rem;
+	}
+
+	.industry__description {
+		flex: 1 0 30%;
+	}
+
+	.industry__icons {
+		flex-direction: column;
+		gap: 20rem;
+		align-items: flex-start;
+	}
+}
+
+@media (width <= 720px) {
+	.industry__row:first-child .industry__row_inner {
+		flex-direction: column;
+		padding-bottom: 15rem;
+	}
+
+	.industry__subtitle,
+	.industry__title {
+		font-size: 40rem;
+	}
+
+	.industry__row {
+		&:hover {
+			.industry__background {
+				opacity: 0;
+			}
+
+			.industry__subtitle {
+				opacity: 1;
+			}
+		}
+	}
+
+	.industry__icon--kfu {
+		width: 80%;
+		height: 50rem;
+	}
+
+	.industry__icon--geomodel {
+		width: 80%;
+		height: 50rem;
+	}
+
+	.industry__icon--agi {
+		width: 80%;
+		height: 50rem;
+	}
+
+	.industry__row_inner--content {
+		height: auto;
+		padding: 30rem 0;
+	}
+}
+
+@media (width <= 480px) {
+	.industry__subtitle,
+	.industry__title {
+		font-size: 30rem;
+	}
+}

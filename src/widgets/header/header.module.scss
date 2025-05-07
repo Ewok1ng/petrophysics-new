@@ -1,0 +1,228 @@
+.header {
+	margin: 15rem 0;
+	border-top: 1rem solid $white-color;
+	border-bottom: 1rem solid $white-color;
+
+	&__inner {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		height: 60rem;
+	}
+
+	&__link {
+		position: relative;
+		z-index: 1000;
+
+		display: flex;
+		align-items: center;
+
+		height: 100%;
+
+		color: $white-color;
+		text-decoration: none;
+
+		border-right: 1rem solid $white-70-color;
+	}
+
+	&__logo {
+		width: 400rem;
+		height: 60rem;
+		margin-right: 30rem;
+	}
+}
+
+.menu {
+	height: 100%;
+	border-right: 1rem solid $white-70-color;
+	border-left: 1rem solid $white-70-color;
+
+	&__list {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		height: 100%;
+	}
+
+	&__list_item {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 100%;
+
+		&:nth-child(2),
+		&:nth-child(3),
+		&:nth-child(4) {
+			border-left: 1rem solid $white-70-color;
+		}
+	}
+
+	&__list_link {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		padding: 16rem 32rem;
+
+		font-size: 16rem;
+		color: $white-color;
+		text-align: center;
+		text-decoration: none;
+	}
+
+	&__list_icon {
+		width: 20rem;
+		height: 20rem;
+	}
+}
+
+.burger_button {
+	cursor: pointer;
+
+	position: relative;
+	z-index: 1000;
+
+	display: none;
+
+	width: 36rem;
+	height: 36rem;
+	margin: 0;
+	padding: 0;
+
+	color: $white-color;
+
+	background: transparent;
+	border: none;
+
+	&__icon {
+		width: 32rem;
+		height: 24rem;
+	}
+}
+
+.burger_menu {
+	position: absolute;
+	z-index: 100;
+	transform: translateX(-100%);
+
+	display: block;
+
+	width: 100vw;
+	height: 100vh;
+	margin: -15rem 0;
+	padding-top: 80rem;
+
+	background: $black-color;
+
+	transition: transform 0.3s ease-in-out;
+
+	&--active {
+		transform: translateX(0);
+		display: block;
+	}
+
+	&__inner {
+		overflow-y: scroll;
+
+		width: 100%;
+		height: 100%;
+		padding: 10rem 25rem 15rem;
+
+		background: $black-color;
+	}
+
+	&__list,
+	&__contacts_list {
+		padding-left: 30rem;
+		list-style: none;
+	}
+
+	&__list_item,
+	&__main {
+		border-bottom: 1rem solid $white-color;
+	}
+
+	&__list_icon {
+		width: 30rem;
+		height: 30rem;
+		color: $white-color;
+	}
+
+	&__menu,
+	&__contacts {
+		margin-bottom: 20rem;
+	}
+
+	&__main,
+	&__list_link,
+	&__contacts_title {
+		display: block;
+
+		padding: 16rem 8rem;
+
+		font-size: 24rem;
+		font-weight: 400;
+		color: $white-color;
+		text-decoration: none;
+	}
+
+	&__list_link {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		width: 100%;
+	}
+
+	&__contacts_list {
+		display: flex;
+		flex-direction: column;
+		gap: 15rem;
+	}
+
+	&__contacts_link {
+		padding: 12rem 4rem;
+		font-size: 24rem;
+	}
+}
+
+@media (width <= 1200px) {
+	.header {
+		border: none;
+	}
+
+	.header__logo {
+		width: auto;
+		margin-right: 0;
+	}
+
+	.header__link {
+		margin: 0 auto;
+		border-right: none;
+	}
+
+	.burger_button {
+		display: flex;
+		align-items: center;
+	}
+
+	.menu {
+		display: none;
+	}
+
+	.registration {
+		display: none;
+
+		&--mobile {
+			display: flex;
+			justify-content: space-between;
+			font-size: 24rem;
+			border-color: $white-color;
+
+			&:hover {
+				color: $white-color;
+				background: transparent;
+				border-color: $white-color !important;
+			}
+		}
+	}
+}

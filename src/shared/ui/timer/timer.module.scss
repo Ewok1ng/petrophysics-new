@@ -1,0 +1,14 @@
+.timer {
+	display: flex;
+	flex-shrink: 0;
+	gap: 20rem;
+	align-items: center;
+	justify-content: center;
+
+	font-family: var(--font-family);
+	font-size: 30rem;
+	font-weight: 700;
+	line-height: 1.2;
+	color: $white-color;
+	text-align: center;
+}

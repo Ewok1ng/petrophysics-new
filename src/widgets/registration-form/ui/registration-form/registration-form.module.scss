@@ -1,0 +1,179 @@
+.registration {
+	&__title {
+		position: relative;
+
+		margin-bottom: 33rem;
+		padding-left: 60rem;
+
+		font-size: 55rem;
+		font-weight: 400;
+		color: $white-color;
+
+		&::after {
+			content: '';
+
+			position: absolute;
+			top: 50%;
+			right: 0;
+
+			width: 65%;
+			height: 1rem;
+
+			background: $white-color;
+		}
+	}
+
+	&__info {
+		margin-bottom: 30rem;
+		padding-left: 60rem;
+		font-size: 22rem;
+		color: $white-color;
+	}
+
+	&__form {
+		display: grid;
+		grid-template-columns: 565rem 1fr;
+		gap: 50rem;
+	}
+
+	&__column {
+		display: flex;
+		flex-direction: column;
+		gap: 20rem;
+		margin-bottom: 30rem;
+	}
+
+	&__checkboxes {
+		grid-column: 1 / -1;
+	}
+
+	&__checkbox {
+		& + & {
+			margin-top: 10rem;
+		}
+	}
+
+	&__submit {
+		display: flex;
+		grid-column: 1 / -1;
+		align-items: center;
+		justify-content: center;
+	}
+
+	&__submit_button {
+		cursor: pointer;
+
+		margin-bottom: 40rem;
+		padding: 10rem 36rem;
+
+		font-size: 32rem;
+		line-height: 1.2;
+		color: $black-color;
+
+		background: $white-color;
+		border: 1rem solid $black-color;
+		box-shadow: $button-shadow;
+
+		transition: 0.3s all ease-in-out;
+
+		&:hover {
+			color: $white-color;
+			background: $black-color;
+			border: 1rem solid $white-color;
+		}
+	}
+}
+
+.radio_group {
+	display: flex;
+	flex-direction: column;
+	gap: 10rem;
+
+	&__title {
+		font-size: 16rem;
+		font-weight: 400;
+		color: $white-color;
+	}
+
+	&__controls {
+		display: flex;
+		flex-direction: column;
+		gap: 10rem;
+
+		padding: 5rem 10rem;
+
+		border: 1rem solid $white-color;
+
+		&--row {
+			flex-direction: row;
+			justify-content: space-between;
+
+			& > div {
+				flex: 1 0 auto;
+			}
+		}
+	}
+}
+
+.upload {
+	grid-column: 1 / -1;
+	width: 100%;
+	margin-bottom: 30rem;
+	border: 1rem solid $white-color;
+
+	&__title_wrapper {
+		display: flex;
+		grid-column: 1 / -1;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	&__title,
+	&__example {
+		font-size: 22rem;
+		font-weight: 400;
+		color: $white-color;
+	}
+
+	&__example {
+		cursor: pointer;
+		text-decoration: none;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
+	&__label {
+		cursor: pointer;
+
+		display: block;
+
+		width: 100%;
+		padding: 30rem 10rem;
+
+		font-size: 22rem;
+		line-height: 1.2;
+		color: $white-color;
+	}
+
+	&__input {
+		display: none;
+		color: $white-color;
+		appearance: none;
+	}
+}
+
+@media (width <= 1200px) {
+	.registration__title {
+		&::after {
+			content: none;
+		}
+	}
+}
+
+@media (width <= 900px) {
+	.registration__form {
+		grid-template-columns: 1fr;
+	}
+}

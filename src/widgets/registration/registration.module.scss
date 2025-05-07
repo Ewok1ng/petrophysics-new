@@ -1,0 +1,30 @@
+.registration {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	padding: 32rem 0;
+
+	text-decoration: none;
+
+	&__title {
+		margin-right: 30rem;
+
+		font-size: 30rem;
+		font-weight: 700;
+		color: $white-color;
+		text-transform: uppercase;
+
+		transition: 0.3s all ease-in-out;
+	}
+
+	&__icon {
+		width: 20rem;
+		height: 20rem;
+		margin-right: 30rem;
+
+		color: $white-color;
+
+		transition: 0.3s all ease-in-out;
+	}
+}

@@ -1,0 +1,23 @@
+// colors
+$black-color: #000;
+$black-20-color: rgb(0 0 0 / 20%);
+$black-70-color: rgb(0 0 0 / 70%);
+$white-color: #fff;
+$white-10-color: rgb(255 255 255 / 10%);
+$white-70-color: rgb(255 255 255 / 70%);
+$gray-color-1: #d4d4d4;
+$gray-color-2: #e0e0e0;
+$gray-color-3: #d9d9d9;
+$gray-color-4: #a5a5a5;
+
+// backgrounds:
+$expert-gradient: linear-gradient(180deg, #fff 0%, #999 100%);
+
+// shadows
+$conference-shadow: 5rem 5rem 0 0 rgb(255 255 255 / 30%);
+$button-shadow: 2px 2px 0 0 rgb(255 255 255 / 30%);
+
+// fonts
+$phetsarath-font: 'Phetsarath', serif;
+$pt-sans-font: 'PTSans', serif;
+$pt-sans-caption-font: 'PTSansCaption', sans-serif;

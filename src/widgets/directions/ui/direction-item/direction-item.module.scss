@@ -1,0 +1,30 @@
+.direction {
+	position: absolute;
+	display: grid;
+	grid-template-columns: 120rem auto;
+	gap: 15rem;
+
+	&__icon {
+		width: 120rem;
+		height: 120rem;
+	}
+}
+
+@media (width <= 900px) {
+	.direction {
+		position: relative;
+		bottom: 0 !important;
+		left: 0 !important;
+	}
+}
+
+@media (width <= 480px) {
+	.direction {
+		grid-template-columns: 80rem auto;
+
+		&__icon {
+			width: 80rem;
+			height: 80rem;
+		}
+	}
+}

@@ -1,0 +1,41 @@
+.registration {
+	cursor: pointer;
+
+	display: flex;
+	gap: 10rem;
+	align-items: center;
+
+	padding: 10rem 28rem;
+
+	font-size: 16rem;
+	color: $white-color;
+	text-decoration: none;
+
+	background: transparent;
+
+	transition: 0.3s all ease-in-out;
+
+	&__title {
+		text-transform: uppercase;
+		transition: 0.3s all ease-in-out;
+	}
+
+	&__icon {
+		width: 20rem;
+		height: 20rem;
+		transition: 0.3s all ease-in-out;
+	}
+
+	&:hover {
+		color: $black-color;
+		background: $white-color;
+	}
+}
+
+.registration.border {
+	border: 1rem solid $white-color;
+
+	&:hover {
+		border-color: $black-color;
+	}
+}

@@ -1,0 +1,24 @@
+.partner {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	padding: 30rem;
+
+	border: 1rem solid #e0e0e0;
+
+	&__icon {
+		filter: brightness(0);
+		transition: filter 0.3s;
+
+		&:hover {
+			filter: none;
+		}
+	}
+}
+
+@media (width <= 480px) {
+	.partner {
+		padding: 5rem 20rem;
+	}
+}

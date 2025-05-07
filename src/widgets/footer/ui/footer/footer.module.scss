@@ -1,0 +1,152 @@
+.footer {
+	&__inner {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__logo_wrapper {
+		display: flex;
+		align-items: center;
+		height: 100%;
+		border-right: 1rem solid $white-70-color;
+	}
+
+	&__logo {
+		width: 400rem;
+		height: 60rem;
+		margin-right: 30rem;
+	}
+
+	&__top {
+		border-top: 1rem solid $white-70-color;
+	}
+
+	&__top_inner {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		height: 60rem;
+	}
+
+	&__bottom {
+		padding: 10rem 0;
+		border-top: 1rem solid $white-70-color;
+	}
+
+	&__bottom_inner {
+		display: flex;
+		gap: 60rem;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	&__bottom_title {
+		font-size: 16rem;
+		font-weight: 400;
+		color: $white-color;
+		text-transform: uppercase;
+	}
+
+	&__contacts {
+		display: flex;
+		gap: 60rem;
+		align-items: center;
+		justify-content: space-between;
+
+		margin-right: 40rem;
+
+		list-style: none;
+	}
+}
+
+.menu {
+	height: 100%;
+	border-right: 1rem solid $white-70-color;
+	border-left: 1rem solid $white-70-color;
+
+	&__list {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		height: 100%;
+	}
+
+	&__list_item {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 100%;
+
+		& + & {
+			border-left: 1rem solid $white-70-color;
+		}
+	}
+
+	&__list_link {
+		display: block;
+
+		width: 240rem;
+		padding: 16rem 32rem;
+
+		font-size: 16rem;
+		color: $white-color;
+		text-align: center;
+		text-decoration: none;
+	}
+}
+
+@media (width <= 1200px) {
+	.footer__logo {
+		width: auto;
+		height: auto;
+	}
+
+	.menu__list_link {
+		width: auto;
+	}
+
+	.footer__contacts {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 15rem;
+
+		width: 100%;
+		margin: 0;
+	}
+
+	.footer__bottom_inner {
+		flex-direction: column;
+		gap: 10rem;
+	}
+
+	.footer__bottom_title {
+		width: 100%;
+		margin-bottom: 10rem;
+		font-size: 24rem;
+		text-align-last: left;
+	}
+}
+
+@media (width <= 900px) {
+	.footer__top {
+		display: none;
+	}
+
+	.footer__contacts {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.footer__contacts_item:last-child {
+		grid-column: 1 / -1;
+
+		br {
+			display: none;
+		}
+	}
+}
+
+// @media (width <= 540px) {
+// 	.footer__contacts {
+// 		grid-template-columns: 1fr;
+// 	}
+// }

@@ -1,0 +1,29 @@
+.wrapper {
+	display: flex;
+	gap: 20rem;
+	align-items: center;
+}
+
+.label {
+	&__icon {
+		width: 15rem;
+		height: 15rem;
+		color: $white-color;
+	}
+}
+
+.input {
+	width: 100%;
+	padding: 20rem 10rem;
+
+	font-size: 16rem;
+	color: $white-color;
+
+	background: transparent;
+	border: 1rem solid $white-color;
+	outline: none;
+
+	&::placeholder {
+		color: $white-color;
+	}
+}
