@@ -7,7 +7,6 @@ import { Registration } from '@widgets/registration';
 import { Info } from '@widgets/info';
 import { Conferences } from '@widgets/conferences';
 import { Footer } from '@widgets/footer';
-
 import { Directions } from '@widgets/directions';
 
 import styles from './main.module.scss';

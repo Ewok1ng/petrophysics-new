@@ -1,10 +1,8 @@
 import clsx from 'clsx';
 
 import { Registration } from '@features/registration';
-
-import { Logo } from '@shared/ui';
-
 import { Contact } from '@entities/contact';
+import { Logo } from '@shared/ui';
 
 import styles from './footer.module.scss';
 
@@ -24,17 +22,17 @@ export const Footer = ({ className }: Props) => {
 						<nav className={styles.menu}>
 							<ul className={styles.menu__list}>
 								<li className={styles.menu__list_item}>
-									<a className={styles.menu__list_link} href="">
+									<a className={styles.menu__list_link} href="/#directions">
 										Направления
 									</a>
 								</li>
 								<li className={styles.menu__list_item}>
-									<a className={styles.menu__list_link} href="">
+									<a className={styles.menu__list_link} href="/#conditions">
 										Условия
 									</a>
 								</li>
 								<li className={styles.menu__list_item}>
-									<a className={styles.menu__list_link} href="">
+									<a className={styles.menu__list_link} href="/#programm">
 										Программа
 									</a>
 								</li>
@@ -48,11 +46,10 @@ export const Footer = ({ className }: Props) => {
 				<div className={styles.container}>
 					<div className={styles.footer__bottom_inner}>
 						<h5 className={styles.footer__bottom_title}>Контакты</h5>
-						<ul className={styles.footer__contacts}>
+						<ul id="contacts" className={styles.footer__contacts}>
 							<li className={styles.footer__contacts_item}>
 								<Contact
 									className={styles.footer__contacts_link}
-									href="#"
 									iconName="user"
 									title="Абдуллина Элина Айратовна"
 								/>
@@ -84,7 +81,6 @@ export const Footer = ({ className }: Props) => {
 							<li className={styles.footer__contacts_item}>
 								<Contact
 									className={styles.footer__contacts_link}
-									href="#"
 									iconName="address"
 									title={
 										<>

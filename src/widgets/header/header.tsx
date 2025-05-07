@@ -1,13 +1,10 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-
 import clsx from 'clsx';
 
 import { Registration } from '@features/registration';
-
-import { Logo, SvgIcon } from '@shared/ui';
-
 import { Contact } from '@entities/contact';
+import { Logo, SvgIcon } from '@shared/ui';
 
 import styles from './header.module.scss';
 
@@ -155,29 +152,24 @@ export const Header = () => {
 					<nav className={styles.menu}>
 						<ul className={styles.menu__list}>
 							<li className={styles.menu__list_item}>
-								<Link
-									className={styles.menu__list_link}
-									to={{
-										hash: 'directions'
-									}}
-								>
+								<a className={styles.menu__list_link} href="/#directions">
 									Направления
-								</Link>
+								</a>
 							</li>
 							<li className={styles.menu__list_item}>
-								<Link className={styles.menu__list_link} to="">
+								<a className={styles.menu__list_link} href="/#conditions">
 									Условия
-								</Link>
+								</a>
 							</li>
 							<li className={styles.menu__list_item}>
-								<Link className={styles.menu__list_link} to="">
+								<a className={styles.menu__list_link} href="/#programm">
 									Программа
-								</Link>
+								</a>
 							</li>
 							<li className={styles.menu__list_item}>
-								<Link className={styles.menu__list_link} to="">
+								<a className={styles.menu__list_link} href="/#contacts">
 									Контакты
-								</Link>
+								</a>
 							</li>
 							<li className={styles.menu__list_item}>
 								<Link

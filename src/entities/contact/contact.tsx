@@ -1,16 +1,20 @@
-import { ReactNode } from 'react';
+import { DetailedHTMLProps, HTMLAttributes, ReactNode } from 'react';
 import clsx from 'clsx';
 
 import { SvgIcon } from '@shared/ui';
 
 import styles from './contact.module.scss';
 
-interface Props {
+interface Props
+	extends Omit<
+		DetailedHTMLProps<HTMLAttributes<HTMLAnchorElement>, HTMLAnchorElement>,
+		'title'
+	> {
 	variant?: 'dark' | 'light';
 	className?: string;
 	iconName: string;
 	title: ReactNode;
-	href: string;
+	href?: string;
 }
 
 export const Contact = ({
@@ -18,11 +22,11 @@ export const Contact = ({
 	className,
 	iconName,
 	title,
-	href
+	href,
+	...props
 }: Props) => {
 	return (
 		<a
-			href={href}
 			className={clsx(
 				styles.contact,
 				{
@@ -31,6 +35,8 @@ export const Contact = ({
 				},
 				className
 			)}
+			href={href}
+			{...props}
 		>
 			<SvgIcon className={styles.contact__icon} name={iconName} />
 			<span className={styles.contact__title}>{title}</span>

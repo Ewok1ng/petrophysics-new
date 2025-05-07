@@ -1,9 +1,7 @@
 import { Link } from 'react-router-dom';
-
 import clsx from 'clsx';
 
 import { Contact } from '@entities/contact';
-
 import { SvgIcon } from '@shared/ui';
 
 import { Accordion } from '../accordion';
@@ -78,7 +76,7 @@ export const Info = () => {
 									Скоро здесь появится описание
 								</Accordion>
 							</li>
-							<li className={styles.info__list_item}>
+							<li id="conditions" className={styles.info__list_item}>
 								<Accordion title="Взносы">
 									<h5 className={styles.table__title}>
 										Стоимость участия в рублях, включая НДС 20%
@@ -125,7 +123,7 @@ export const Info = () => {
 									</div>
 								</Accordion>
 							</li>
-							<li className={styles.info__list_item}>
+							<li id="programm" className={styles.info__list_item}>
 								<Accordion title="Программа">
 									<div className={styles.schedule}>
 										<p className={styles.schedule__text}>
