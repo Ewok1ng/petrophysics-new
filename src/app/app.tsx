@@ -6,15 +6,15 @@ import 'virtual:svg-icons-register';
 import './styles/styles.scss';
 
 import { Main } from '@pages/main';
-import { Registration } from '@pages/registration';
+// import { Registration } from '@pages/registration';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
 	<React.StrictMode>
 		<BrowserRouter>
 			<Routes>
 				<Route path="/" element={<Main />} />
-				<Route path="#directions" element={<Main />} />
-				<Route path="/registration" element={<Registration />} />
+				<Route path="/registration" element={<Main />} />{' '}
+				{/* <Registration /> */}
 			</Routes>
 		</BrowserRouter>
 	</React.StrictMode>
