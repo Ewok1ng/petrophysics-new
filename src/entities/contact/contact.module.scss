@@ -2,9 +2,7 @@
 	display: flex;
 	gap: 10rem;
 	align-items: center;
-
 	font-size: 16rem;
-	text-decoration: none;
 
 	&--light {
 		color: $white-color;
@@ -20,6 +18,14 @@
 		&:hover {
 			color: $black-70-color;
 		}
+	}
+
+	&--default {
+		text-decoration: none;
+	}
+
+	&--underline {
+		text-decoration: underline;
 	}
 
 	&__icon {

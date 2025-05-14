@@ -11,6 +11,7 @@ interface Props
 		'title'
 	> {
 	variant?: 'dark' | 'light';
+	decoration?: 'default' | 'underline';
 	className?: string;
 	iconName: string;
 	title: ReactNode;
@@ -19,6 +20,7 @@ interface Props
 
 export const Contact = ({
 	variant = 'light',
+	decoration = 'default',
 	className,
 	iconName,
 	title,
@@ -31,7 +33,9 @@ export const Contact = ({
 				styles.contact,
 				{
 					[styles['contact--light']]: variant === 'light',
-					[styles['contact--dark']]: variant === 'dark'
+					[styles['contact--dark']]: variant === 'dark',
+					[styles['contact--default']]: decoration === 'default',
+					[styles['contact--underline']]: decoration === 'underline'
 				},
 				className
 			)}

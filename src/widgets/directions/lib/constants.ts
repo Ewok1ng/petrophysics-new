@@ -15,7 +15,7 @@ export const DIRECTIONS: readonly IDirection[] = [
 		icon: 'directions-2',
 		left: '30%',
 		bottom: '30%',
-		maxWidth: '410rem'
+		maxWidth: '330rem'
 	},
 	{
 		id: 3,
@@ -23,7 +23,7 @@ export const DIRECTIONS: readonly IDirection[] = [
 		icon: 'directions-3',
 		left: '60%',
 		bottom: '60%',
-		maxWidth: '570rem'
+		maxWidth: '500rem'
 	},
 	{
 		id: 4,
@@ -31,23 +31,23 @@ export const DIRECTIONS: readonly IDirection[] = [
 		icon: 'directions-4',
 		left: '5%',
 		bottom: '10%',
-		maxWidth: '330rem'
+		maxWidth: '370rem'
 	},
 	{
 		id: 5,
 		title:
 			'Программные средства и инструменты автоматизации процесса интерпретации материалов ГИС',
 		icon: 'directions-5',
-		left: '50%',
+		left: '45%',
 		bottom: '5%',
-		maxWidth: '435rem'
+		maxWidth: '390rem'
 	},
 	{
 		id: 6,
 		title: 'Геомеханическое и петроупругое моделирование',
 		icon: 'directions-6',
-		left: '80%',
+		left: '75%',
 		bottom: '20%',
-		maxWidth: '325rem'
+		maxWidth: '300rem'
 	}
 ];

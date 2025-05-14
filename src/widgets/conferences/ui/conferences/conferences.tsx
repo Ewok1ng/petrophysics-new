@@ -19,8 +19,7 @@ export const Conferences = () => {
 						<h3 className={styles.conferences__title}>Ближайшие конференции</h3>
 						<p className={styles.conferences__subtitle}>
 							Приглашаем Вас принять участие в других научных и практических
-							конференциях, проводимых казанским федеральным университетом в
-							2025 году
+							конференциях, проводимых казанским федеральным университетом
 						</p>
 					</div>
 					<div className={styles.conferences__column}>

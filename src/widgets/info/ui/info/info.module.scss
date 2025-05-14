@@ -6,7 +6,8 @@
 
 	&__inner {
 		display: grid;
-		grid-template-columns: 375rem auto;
+		grid-template-columns: 320rem auto;
+		gap: 60rem;
 	}
 
 	&__column {
@@ -14,10 +15,20 @@
 		flex-direction: column;
 		justify-content: space-between;
 		height: 100%;
+
+		&--info {
+			justify-content: start;
+			border-right: 1rem solid $black-color;
+		}
+	}
+
+	&__group {
+		margin-bottom: 40rem;
 	}
 
 	&__title {
 		margin-top: 70rem;
+		margin-bottom: 40rem;
 
 		font-size: 30rem;
 		font-weight: 400;
@@ -32,6 +43,22 @@
 		justify-content: space-between;
 
 		list-style: none;
+	}
+
+	&__contacts_title {
+		margin-bottom: 10rem;
+
+		font-size: 16rem;
+		font-weight: 700;
+		line-height: 1.5;
+		color: $black-color;
+	}
+
+	&__contacts_group_link {
+		font-size: 16rem;
+		line-height: 1.5;
+		color: $black-color;
+		text-decoration: underline;
 	}
 
 	&__list {
@@ -79,6 +106,7 @@
 	display: flex;
 	flex-direction: column;
 	width: 100%;
+	margin-bottom: 15rem;
 
 	&__title {
 		margin-bottom: 10rem;
@@ -182,6 +210,47 @@
 			}
 		}
 	}
+}
+
+.link {
+	cursor: pointer;
+
+	display: inline-flex;
+	gap: 10rem;
+	align-items: center;
+
+	padding: 10rem 25rem;
+
+	font-size: 16rem;
+	color: $white-color;
+	text-decoration: underline;
+
+	background: transparent;
+	border: 1rem solid $black-color;
+
+	transition: 0.3s all ease-in-out;
+
+	&__title {
+		color: $black-color;
+		transition: 0.3s all ease-in-out;
+	}
+
+	&__icon {
+		width: 20rem;
+		height: 20rem;
+		color: $black-color;
+		transition: 0.3s all ease-in-out;
+	}
+}
+
+.rules {
+	margin-bottom: 10rem;
+}
+
+.payment {
+	display: flex;
+	gap: 50rem;
+	align-items: center;
 }
 
 @media (width <= 1200px) {

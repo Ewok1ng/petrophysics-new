@@ -16,6 +16,12 @@
 			filter: none;
 		}
 	}
+
+	&--default {
+		.partner__icon {
+			filter: brightness(1);
+		}
+	}
 }
 
 @media (width <= 480px) {

@@ -1,48 +1,72 @@
-/* eslint-disable import/no-internal-modules */
-import conference1 from '@shared/assets/images/conferences/1.jpg';
-import conference2 from '@shared/assets/images/conferences/2.jpg';
-import conference3 from '@shared/assets/images/conferences/3.jpg';
-import conference4 from '@shared/assets/images/conferences/4.jpg';
-import conference5 from '@shared/assets/images/conferences/5.jpg';
-import conference6 from '@shared/assets/images/conferences/6.jpg';
-
 import { IConference } from './types';
 
 export const CONFERENCES: readonly IConference[] = [
 	{
 		id: 1,
-		href: 'https://tuep.ru/',
-		imageSrc: conference1,
-		alt: ' Tatarstan UPEXPRO 2025'
+		iconClassName: 'upexpro',
+		city: 'Казань',
+		date: '10-12 апреля 2025',
+		dateColor: 'green',
+		description: 'IX МЕЖДУНАРОДНАЯ молодежная научная КОНФЕРЕНЦИЯ',
+		title: 'Tatarstan UpExPro',
+		iconName: 'conferences-1',
+		link: 'https://t.me/tatarstanupexpro'
 	},
 	{
 		id: 2,
-		href: 'https://cheorconference.ru/about',
-		imageSrc: conference2,
-		alt: 'Chemistry Development Technology'
+		iconClassName: 'oil',
+		city: 'Казань',
+		date: '27-28 мая 2025',
+		dateColor: 'red',
+		description: 'V Международная научно-техническая конференция',
+		title: 'ТРУДНОИЗВЛЕКАЕМЫЕ ЗАПАСЫ НЕФТИ',
+		iconName: 'conferences-2',
+		link: 'https://cheorconference.ru/about'
 	},
 	{
 		id: 3,
-		href: 'https://t.me/+f4bvVmRZzVc2NjFi',
-		imageSrc: conference3,
-		alt: 'Разработка газоконденсатных месторождений'
+		iconClassName: 'kfu',
+		city: 'Казань',
+		date: '30 мая 2025',
+		dateColor: 'green',
+		description: 'Техническая сессия',
+		title: 'РАЗРАБОТКА ГАЗОКОНДЕНСАТНЫХ МЕСТОРОЖДЕНИЙ',
+		iconName: 'conferences-3',
+		link: 'https://t.me/+f4bvVmRZzVc2NjFi'
 	},
 	{
 		id: 4,
-		href: 'https://pgcconf.ru',
-		imageSrc: conference4,
-		alt: 'Practice GeoChemistry 2025'
+		iconClassName: 'pgc',
+		city: 'Казань',
+		date: '26-27 июня 2025',
+		dateColor: 'green',
+		description:
+			'IV Научно-практическая конференция по нефтяной гидрогеологии, геохимии и гидродинамическому моделированию',
+		title: 'Practice GeoChemistry',
+		iconName: 'conferences-4',
+		link: 'https://pgcconf.ru'
 	},
 	{
 		id: 5,
-		href: 'https://t.me/+bC81bXWSHqkyZDU6',
-		imageSrc: conference5,
-		alt: 'Актуальные направления цифровизации и развития нейросетевых технологий в нефтегазовой отравли'
+		iconClassName: 'neural',
+		city: 'Казань',
+		date: '17-18 июля 2025',
+		dateColor: 'green',
+		description: 'Круглый стол',
+		title:
+			'Актуальные направления цифровизации и развития нейросетевых технологий в нефтегазовой отравли',
+		iconName: 'conferences-5',
+		link: 'https://t.me/+bC81bXWSHqkyZDU6'
 	},
 	{
 		id: 6,
-		href: 'https://karb0n.ru/',
-		imageSrc: conference6,
-		alt: 'KARBON 2025'
+		iconClassName: 'carbon',
+		city: 'Казань',
+		date: '13-15 августа 2025',
+		dateColor: 'green',
+		description: 'II Международная научно-практическая конференция ',
+		title: 'Карбонатные отложения',
+		iconName: 'conferences-6',
+		link: 'https://karb0n.ru/'
 	}
 ];

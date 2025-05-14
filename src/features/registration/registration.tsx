@@ -27,7 +27,8 @@ export const Registration = ({ className, border = true, ...props }: Props) => {
 				},
 				className
 			)}
-			to="/registration"
+			to="https://geomodel.ru/petrophysicsxxi#themes"
+			target="_blank"
 			{...props}
 		>
 			<span className={styles.registration__title}>Регистрация</span>

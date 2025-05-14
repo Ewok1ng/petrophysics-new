@@ -40,7 +40,9 @@ export const Industry = () => {
 							/>
 						</div>
 
-						<h4 className={styles.industry__subtitle}>научная площадка</h4>
+						<h4 className={styles.industry__subtitle}>
+							Организатор конференции
+						</h4>
 					</div>
 				</div>
 				<div
@@ -62,20 +64,20 @@ export const Industry = () => {
 							<SvgIcon
 								className={clsx(
 									styles.industry__icon,
-									styles['industry__icon--agi']
-								)}
-								name="industry-agi"
-							/>
-							<SvgIcon
-								className={clsx(
-									styles.industry__icon,
 									styles['industry__icon--geomodel']
 								)}
 								name="industry-geomodel"
 							/>
+							<SvgIcon
+								className={clsx(
+									styles.industry__icon,
+									styles['industry__icon--agi']
+								)}
+								name="industry-agi"
+							/>
 						</div>
 						<h4 className={styles.industry__subtitle}>
-							Организатор конференции
+							Соорганизаторы конференции
 						</h4>
 					</div>
 				</div>

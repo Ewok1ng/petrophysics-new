@@ -6,15 +6,17 @@ import exp4 from '@shared/assets/images/experts/exp-4.png';
 import exp5 from '@shared/assets/images/experts/exp-5.png';
 import exp9 from '@shared/assets/images/experts/exp-9.png';
 import exp10 from '@shared/assets/images/experts/exp-10.png';
-import exp14 from '@shared/assets/images/experts/exp-15.png';
-import exp15 from '@shared/assets/images/experts/exp-14.png';
+import exp14 from '@shared/assets/images/experts/exp-14.png';
+import exp15 from '@shared/assets/images/experts/exp-15.png';
+import exp16 from '@shared/assets/images/experts/exp-16.png';
+import exp17 from '@shared/assets/images/experts/exp-17.png';
 
 import { IExpert } from './types';
 
 export const EXPERTS: readonly IExpert[] = [
 	{
 		id: 1,
-		title: 'Любенец Алексей',
+		title: 'Лубинец Алексей',
 		description: 'Генеральный директор ООО «Омни Дата»',
 		imageSrc: exp1
 	},
@@ -51,6 +53,19 @@ export const EXPERTS: readonly IExpert[] = [
 		imageSrc: ''
 	},
 	{
+		id: 9,
+		title: 'Акиньшин Александр',
+		description:
+			'Старший эксперт экспертно-аналитического управления ПАО «Роснефть»',
+		imageSrc: exp9
+	},
+	{
+		id: 16,
+		title: 'Шуматбаев Кирилл',
+		description: 'Главный эксперт ДРМ СП «Татнефть-Добыча» «ТатНИПИнефть»',
+		imageSrc: exp16
+	},
+	{
 		id: 7,
 		title: 'Ефимов Виктор',
 		description:
@@ -63,13 +78,6 @@ export const EXPERTS: readonly IExpert[] = [
 		description:
 			'Начальник центра обработки и интерпретации ООО «Газпром ВНИИГАЗ»',
 		imageSrc: ''
-	},
-	{
-		id: 9,
-		title: 'Акиньшин Александр',
-		description:
-			'Старший эксперт экспертно-аналитического управления ПАО «Роснефть»',
-		imageSrc: exp9
 	},
 	{
 		id: 10,
@@ -106,5 +114,11 @@ export const EXPERTS: readonly IExpert[] = [
 		title: 'Овчаренко Юрий',
 		description: 'Независимый эксперт по геомеханике',
 		imageSrc: exp15
+	},
+	{
+		id: 15,
+		title: 'Габбасов Дамир',
+		description: 'Заместитель начальника отдела геологии ООО «РусГазАльянс»',
+		imageSrc: exp17
 	}
 ];

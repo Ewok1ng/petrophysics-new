@@ -2,8 +2,12 @@
 $black-color: #000;
 $black-20-color: rgb(0 0 0 / 20%);
 $black-70-color: rgb(0 0 0 / 70%);
+$black-80-color: rgb(0 0 0 / 80%);
 $white-color: #fff;
+$white-5-color: rgb(255 255 255 / 5%);
 $white-10-color: rgb(255 255 255 / 10%);
+$white-15-color: rgb(255 255 255 / 15%);
+$white-30-color: rgb(255 255 255 / 30%);
 $white-70-color: rgb(255 255 255 / 70%);
 $gray-color-1: #d4d4d4;
 $gray-color-2: #e0e0e0;
@@ -12,6 +16,7 @@ $gray-color-4: #a5a5a5;
 
 // backgrounds:
 $expert-gradient: linear-gradient(180deg, #fff 0%, #999 100%);
+$conference-gradient: linear-gradient(270deg, #00c7d4 0%, #02e7bd 100%);
 
 // shadows
 $conference-shadow: 5rem 5rem 0 0 rgb(255 255 255 / 30%);

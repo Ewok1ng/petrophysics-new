@@ -1,0 +1,68 @@
+.paint0 {
+	fill: black;
+	transition: fill 0.3s ease-in-out;
+}
+
+.paint1 {
+	fill: white;
+	transition: fill 0.3s ease-in-out;
+}
+
+.paint2 {
+	fill: white;
+	transition: fill 0.3s ease-in-out;
+}
+
+.paint3 {
+	fill: black;
+	transition: fill 0.3s ease-in-out;
+}
+
+.paint4 {
+	fill: white;
+	transition: fill 0.3s ease-in-out;
+}
+
+.paint5 {
+	fill: black;
+	transition: fill 0.3s ease-in-out;
+}
+
+.item {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	min-width: 0;
+	padding: 30rem;
+
+	border: 1rem solid #e0e0e0;
+
+	transition: fill 0.3s ease-in-out;
+
+	&:hover {
+		.paint0 {
+			fill: url('#paint0_radial_275_371');
+		}
+
+		.paint1 {
+			fill: url('#paint1_radial_275_371');
+		}
+
+		.paint2 {
+			fill: url('#paint2_linear_275_371');
+		}
+
+		.paint3 {
+			fill: url('#paint3_linear_275_371');
+		}
+
+		.paint4 {
+			fill: url('#paint4_radial_275_371');
+		}
+
+		.paint5 {
+			fill: black;
+		}
+	}
+}

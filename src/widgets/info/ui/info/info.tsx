@@ -13,57 +13,132 @@ export const Info = () => {
 		<section id="info" className={styles.info}>
 			<div className={styles.container}>
 				<div className={styles.info__inner}>
-					<div className={styles.info__column}>
-						<h4 className={styles.info__title}>
+					<div
+						className={clsx(styles.info__column, styles['info__column--info'])}
+					>
+						<h3 className={styles.info__title}>
 							Принять участие проще простого...
-						</h4>
-						<ul className={styles.info__contacts}>
-							<li className={styles.info__contacts_item}>
-								<Contact
-									variant="dark"
-									className={styles.info__contacts_link}
-									href="#"
-									iconName="user"
-									title="Абдуллина Элина Айратовна"
-								/>
-							</li>
-							<li className={styles.info__contacts_item}>
-								<Contact
-									variant="dark"
-									className={styles.info__contacts_link}
-									href="https://t.me/pp21_conf"
-									iconName="tg"
-									title="@pp21_conf"
-								/>
-							</li>
-							<li className={styles.info__contacts_item}>
-								<Contact
-									variant="dark"
-									className={styles.info__contacts_link}
-									href="mailto:pp21.conf@yandex.ru"
-									iconName="at"
-									title="pp21.conf@yandex.ru"
-								/>
-							</li>
-							<li className={styles.info__contacts_item}>
-								<Contact
-									variant="dark"
-									className={styles.info__contacts_link}
-									href="#"
-									iconName="address"
-									title={
-										<>
-											«ИТ-парк» <br /> г. Казань, ул. Петербургская, д. 52
-										</>
-									}
-								/>
-							</li>
-						</ul>
+						</h3>
+						<div className={styles.info__group}>
+							<h4 className={styles.info__contacts_title}>
+								Организационные вопросы
+							</h4>
+							<ul className={styles.info__contacts}>
+								<li className={styles.info__contacts_item}>
+									<Contact
+										variant="dark"
+										className={styles.info__contacts_link}
+										href="#"
+										iconName="user"
+										title="Абдуллина Элина Айратовна"
+									/>
+								</li>
+								<li className={styles.info__contacts_item}>
+									<Contact
+										variant="dark"
+										className={styles.info__contacts_link}
+										href="https://t.me/pp21_conf"
+										iconName="tg"
+										title="@pp21_conf"
+									/>
+								</li>
+								<li className={styles.info__contacts_item}>
+									<Contact
+										variant="dark"
+										className={styles.info__contacts_link}
+										href="mailto:pp21.conf@yandex.ru"
+										iconName="at"
+										title="pp21.conf@yandex.ru"
+									/>
+								</li>
+								<li className={styles.info__contacts_item}>
+									<Contact
+										variant="dark"
+										className={styles.info__contacts_link}
+										href="#"
+										iconName="address"
+										title={
+											<>
+												«ИТ-парк» <br /> г. Казань, ул. Петербургская, д. 52
+											</>
+										}
+									/>
+								</li>
+							</ul>
+						</div>
+						<div className={styles.info__group}>
+							<h4 className={styles.info__contacts_title}>
+								По вопросам регистрации
+							</h4>
+							<ul className={styles.info__contacts}>
+								<li className={styles.info__contacts_item}>
+									<Contact
+										variant="dark"
+										className={styles.info__contacts_link}
+										href="#"
+										iconName="user"
+										title="Абдуллина Элина Айратовна"
+									/>
+								</li>
+								<li className={styles.info__contacts_item}>
+									<Contact
+										variant="dark"
+										decoration="underline"
+										className={styles.info__contacts_link}
+										href="https://geomodel.ru/petrophysicsxxi"
+										iconName="geomodel"
+										title="Геомодель"
+									/>
+								</li>
+							</ul>
+						</div>
+						<div className={styles.info__group}>
+							<h4 className={styles.info__contacts_title}>
+								По вопросам подачи тезисов
+							</h4>
+							<ul className={styles.info__contacts}>
+								<li className={styles.info__contacts_item}>
+									<Contact
+										variant="dark"
+										className={styles.info__contacts_link}
+										href="mailto:events@geomodel.ru"
+										iconName="at"
+										title="events@geomodel.ru"
+									/>
+								</li>
+								<li className={styles.info__contacts_item}>
+									<Contact
+										variant="dark"
+										decoration="underline"
+										className={styles.info__contacts_link}
+										href="https://geomodel.ru/petrophysicsxxi#themes"
+										iconName="geomodel"
+										title="Геомодель"
+									/>
+								</li>
+							</ul>
+						</div>
+						<div className={styles.info__group}>
+							<h4 className={styles.info__contacts_title}>
+								Финансовый оператор мероприятия
+							</h4>
+							<Link
+								className={styles.info__contacts_group_link}
+								to="https://geomodel.ru/contacts"
+								target="_blank"
+							>
+								ООО «Геомодель Развитие»
+							</Link>
+						</div>
 					</div>
 					<div className={styles.info__column}>
 						<ul className={styles.info__list}>
 							<li className={styles.info__list_item}>
-								<Link className={styles.info__registration} to="/registration">
+								<Link
+									className={styles.info__registration}
+									to="https://geomodel.ru/petrophysicsxxi#themes"
+									target="_blank"
+								>
 									<span>Регистрация</span>
 									<SvgIcon
 										className={styles.info__registration_icon}
@@ -73,7 +148,17 @@ export const Info = () => {
 							</li>
 							<li className={styles.info__list_item}>
 								<Accordion title="Правила участия ">
-									Скоро здесь появится описание
+									<div className={styles.rules}>
+										Скоро здесь появится описание
+									</div>
+									<Link
+										className={styles.link}
+										to="https://geomodel.ru/petrophysicsxxi#themes"
+										target="_blank"
+									>
+										<span className={styles.link__title}>Подать тезисы</span>
+										<SvgIcon className={styles.link__icon} name="arrow" />
+									</Link>
 								</Accordion>
 							</li>
 							<li id="conditions" className={styles.info__list_item}>
@@ -120,6 +205,15 @@ export const Info = () => {
 											<div className={styles.table__column}>17 000</div>
 											<div className={styles.table__column}></div>
 										</div>
+									</div>
+									<div className={styles.payment}>
+										<Link className={styles.link} to="#">
+											<span className={styles.link__title}>
+												Оплатить участие
+											</span>
+											<SvgIcon className={styles.link__icon} name="arrow" />
+										</Link>
+										<b>Срок оплаты - до 01.09.2025</b>
 									</div>
 								</Accordion>
 							</li>

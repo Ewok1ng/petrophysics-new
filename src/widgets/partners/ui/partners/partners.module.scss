@@ -21,6 +21,21 @@
 	}
 }
 
+.partner {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	min-width: 0;
+	padding: 30rem;
+
+	border: 1rem solid #e0e0e0;
+}
+
+.gazprom {
+	filter: brightness(1);
+}
+
 @media (width <= 900px) {
 	.partners__items {
 		grid-template-columns: repeat(4, 1fr);
