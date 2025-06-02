@@ -79,12 +79,20 @@
 @media (width <= 1200px) {
 	.experts__list {
 		grid-template-columns: repeat(2, 1fr);
+
+		&--main {
+			grid-template-columns: repeat(1, 1fr);
+		}
+	}
+
+	.experts__title {
+		font-size: 36rem;
 	}
 }
 
 @media (width <= 900px) {
-	.experts__inner {
-		grid-template-columns: 1fr;
+	.experts {
+		grid-template-columns: repeat(1, 1fr);
 	}
 
 	.experts__main {

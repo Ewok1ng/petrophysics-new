@@ -132,12 +132,16 @@
 
 @media (width <= 900px) {
 	.petrophysics__footer {
-		flex-direction: column;
+		grid-template-columns: repeat(1, 100%);
 		height: auto;
 	}
 
 	.petrophysics__column {
 		width: 100%;
+
+		&--main {
+			border-right: none;
+		}
 
 		&:nth-child(2) {
 			border-top: 1rem solid $white-color;
@@ -145,5 +149,10 @@
 			border-bottom: 1rem solid $white-color;
 			border-left: none;
 		}
+	}
+
+	.petrophysics__link {
+		border: none;
+		border-left: 1rem solid $white-color;
 	}
 }

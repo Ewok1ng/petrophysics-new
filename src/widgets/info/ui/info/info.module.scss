@@ -326,6 +326,20 @@
 		width: 50rem;
 		height: 50rem;
 	}
+
+	.table {
+		width: 100%;
+	}
+
+	.info__title,
+	.info__contacts_title,
+	.info__group {
+		display: none;
+	}
+
+	.schedule__table {
+		grid-template-columns: 1fr;
+	}
 }
 
 @media (width <= 480px) {

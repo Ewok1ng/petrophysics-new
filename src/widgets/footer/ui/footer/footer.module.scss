@@ -85,9 +85,18 @@
 }
 
 @media (width <= 1200px) {
-	.footer__logo {
-		width: auto;
-		height: auto;
+	.registration {
+		display: none;
+	}
+
+	.footer__wrapper {
+		display: grid;
+		grid-template-columns: 25% auto;
+		width: 100%;
+	}
+
+	.menu {
+		border-right: none;
 	}
 
 	.menu__list_link {
@@ -117,8 +126,8 @@
 }
 
 @media (width <= 900px) {
-	.footer__top {
-		display: none;
+	.footer__list_link {
+		padding: 10rem 0;
 	}
 
 	.footer__contacts {
@@ -134,8 +143,13 @@
 	}
 }
 
-// @media (width <= 540px) {
-// 	.footer__contacts {
-// 		grid-template-columns: 1fr;
-// 	}
-// }
+@media (width <= 720px) {
+	.footer__wrapper {
+		grid-template-columns: 1fr;
+		justify-items: center;
+	}
+
+	.menu {
+		display: none;
+	}
+}

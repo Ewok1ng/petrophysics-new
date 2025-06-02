@@ -22,24 +22,13 @@ export const Conferences = () => {
 			</div>
 			<div className={styles.conferences__column}>
 				<div className={styles.conferences__items}>
-					<div className={styles.conferences__row}>
-						{CONFERENCES.slice(0, 3).map(({ id, ...props }) => (
-							<Conference
-								key={id}
-								className={styles.conferences__item}
-								{...props}
-							/>
-						))}
-					</div>
-					<div className={styles.conferences__row}>
-						{CONFERENCES.slice(3).map(({ id, ...props }) => (
-							<Conference
-								key={id}
-								className={styles.conferences__item}
-								{...props}
-							/>
-						))}
-					</div>
+					{CONFERENCES.map(({ id, ...props }) => (
+						<Conference
+							key={id}
+							className={styles.conferences__item}
+							{...props}
+						/>
+					))}
 				</div>
 			</div>
 		</section>

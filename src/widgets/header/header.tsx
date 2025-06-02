@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import clsx from 'clsx';
 
 import { Registration } from '@features/registration';
-import { Contact } from '@entities/contact';
 import { Logo, SvgIcon } from '@shared/ui';
 
 import styles from './header.module.scss';
@@ -30,6 +29,7 @@ export const Header = () => {
 					<button className={styles.burger_button} onClick={toggleBurgerMenu}>
 						<SvgIcon className={styles.burger_button__icon} name="burger" />
 					</button>
+
 					<Link className={styles.header__link} to="/">
 						<Logo className={styles.header__logo} />
 					</Link>
@@ -90,9 +90,6 @@ export const Header = () => {
 				})}
 			>
 				<div className={styles.burger_menu__inner}>
-					<Link className={styles.burger_menu__main} to="/">
-						Главная
-					</Link>
 					<nav className={styles.burger_menu__menu}>
 						<ul
 							className={styles.burger_menu__list}
@@ -100,6 +97,29 @@ export const Header = () => {
 								setIsBurgerMenuActive(false);
 							}}
 						>
+							<li className={styles.burger_menu__list_item}>
+								<Link className={styles.burger_menu__list_link} to="/">
+									Главная
+									<SvgIcon
+										className={styles.burger_menu__list_icon}
+										name="schevron-right"
+									/>
+								</Link>
+							</li>
+							<li className={styles.burger_menu__list_item}>
+								<Link
+									className={styles.burger_menu__list_link}
+									to={{
+										hash: 'directions'
+									}}
+								>
+									О конференции
+									<SvgIcon
+										className={styles.burger_menu__list_icon}
+										name="schevron-right"
+									/>
+								</Link>
+							</li>
 							<li className={styles.burger_menu__list_item}>
 								<Link
 									className={styles.burger_menu__list_link}
@@ -116,7 +136,7 @@ export const Header = () => {
 							</li>
 							<li className={styles.burger_menu__list_item}>
 								<Link className={styles.burger_menu__list_link} to="">
-									Условия
+									Правила и условия
 									<SvgIcon
 										className={styles.burger_menu__list_icon}
 										name="schevron-right"
@@ -132,10 +152,60 @@ export const Header = () => {
 									/>
 								</Link>
 							</li>
+							<li className={styles.burger_menu__list_item}>
+								<Link
+									className={clsx(
+										styles.burger_menu__list_link,
+										styles['burger_menu__list_link--underline']
+									)}
+									to="https://docs.yandex.ru/docs/view?url=ya-browser%3A%2F%2F4DT1uXEPRrJRXlUFoewruIR2IkxEdU5xgF66ho43tWsml5jSU0tpdUOPSwSe-5g8pirdoQgKwaaDe-Nv9vPvCa_mySKpgEUOkyweDVIo8vQHvPTvaUIkC9c75KkQHpQZsYjL-3aaWVwZ7WLoJUYXtw%3D%3D%3Fsign%3DTrKAwxH5OapEphK0lVd9fWUM9EZpaodiKUG--kMvo7I%3D&name=Petrophysics25_Conference_template.docx&nosw=1"
+									target="_blank"
+								>
+									Шаблон оформления тезисов
+									<SvgIcon
+										className={styles.burger_menu__list_icon}
+										name="schevron-right"
+									/>
+								</Link>
+							</li>
+							<li className={styles.burger_menu__list_item}>
+								<Link
+									className={clsx(
+										styles.burger_menu__list_link,
+										styles['burger_menu__list_link--underline']
+									)}
+									to="https://geomodel.ru/petrophysicsxxi#themes"
+									target="_blank"
+								>
+									Подать тезисы
+									<SvgIcon
+										className={styles.burger_menu__list_icon}
+										name="arrow"
+									/>
+								</Link>
+							</li>
+							<li className={styles.burger_menu__list_item}>
+								<Link
+									className={clsx(
+										styles.burger_menu__list_link,
+										styles['burger_menu__list_link--underline']
+									)}
+									to="https://t.me/pp21_conf"
+									target="_blank"
+								>
+									Присоединиться к нам
+									<SvgIcon
+										className={styles.burger_menu__list_icon}
+										name="tg"
+									/>
+								</Link>
+							</li>
 						</ul>
 					</nav>
 					<div className={styles.burger_menu__contacts}>
-						<h5 className={styles.burger_menu__contacts_title}>Контакты</h5>
+						<h5 className={styles.burger_menu__contacts_title}>
+							Организационные вопросы
+						</h5>
 						<ul
 							className={styles.burger_menu__contacts_list}
 							onClick={() => {
@@ -143,60 +213,57 @@ export const Header = () => {
 							}}
 						>
 							<li className={styles.burger_menu__contacts_item}>
-								<Contact
-									className={styles.burger_menu__contacts_link}
-									href="#"
-									iconName="user"
-									title="Абдуллина Элина Айратовна"
-								/>
+								<Link
+									className={clsx(styles.burger_menu__list_link)}
+									to="https://t.me/pp21_conf"
+									target="_blank"
+								>
+									Абдуллина Элина Айратовна
+									<SvgIcon
+										className={styles.burger_menu__list_icon}
+										name="user"
+									/>
+								</Link>
 							</li>
 							<li className={styles.burger_menu__contacts_item}>
-								<Contact
-									className={styles.burger_menu__contacts_link}
-									href="https://api.whatsapp.com/send/?phone=79520369998"
-									iconName="whatsapp"
-									title="+7 952 036 99 98"
-								/>
+								<Link
+									className={clsx(styles.burger_menu__list_link)}
+									to="https://api.whatsapp.com/send/?phone=79520369998"
+									target="_blank"
+								>
+									+7 952 036 99 98
+									<SvgIcon
+										className={styles.burger_menu__list_icon}
+										name="whatsapp"
+									/>
+								</Link>
 							</li>
 							<li className={styles.burger_menu__contacts_item}>
-								<Contact
-									className={styles.burger_menu__contacts_link}
-									href="https://t.me/pp21_conf"
-									iconName="tg"
-									title="@pp21_conf"
-								/>
+								<Link
+									className={clsx(styles.burger_menu__list_link)}
+									to="mailto:pp21.conf@yandex.ru"
+									target="_blank"
+								>
+									pp21.conf@yandex.ru
+									<SvgIcon
+										className={styles.burger_menu__list_icon}
+										name="at"
+									/>
+								</Link>
 							</li>
 							<li className={styles.burger_menu__contacts_item}>
-								<Contact
-									className={styles.burger_menu__contacts_link}
-									href="mailto:pp21.conf@yandex.ru"
-									iconName="at"
-									title="pp21.conf@yandex.ru"
-								/>
-							</li>
-							<li className={styles.burger_menu__contacts_item}>
-								<Contact
-									className={styles.burger_menu__contacts_link}
-									href="#"
-									iconName="address"
-									title={
-										<>
-											«ИТ-парк» <br /> г. Казань, ул. Петербургская, д. 52
-										</>
-									}
-								/>
+								<Link className={clsx(styles.burger_menu__list_link)} to="#">
+									<>
+										«ИТ-парк» <br /> г. Казань, ул. Петербургская, д. 52
+									</>
+									<SvgIcon
+										className={styles.burger_menu__list_icon}
+										name="address"
+									/>
+								</Link>
 							</li>
 						</ul>
 					</div>
-					<Registration
-						className={clsx(
-							styles.registration,
-							styles['registration--mobile']
-						)}
-						onClick={() => {
-							setIsBurgerMenuActive(false);
-						}}
-					/>
 				</div>
 			</div>
 		</>
