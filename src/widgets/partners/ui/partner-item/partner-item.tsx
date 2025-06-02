@@ -6,13 +6,17 @@ import styles from './partner-item.module.scss';
 
 interface Props {
 	className?: string;
+	iconClassName?: string;
 	name: string;
 }
 
-export const PartnerItem = ({ name, className }: Props) => {
+export const PartnerItem = ({ name, className, iconClassName }: Props) => {
 	return (
-		<div className={styles.partner}>
-			<SvgIcon className={clsx(styles.partner__icon, className)} name={name} />
+		<div className={clsx(styles.partner, className)}>
+			<SvgIcon
+				className={clsx(styles.partner__icon, iconClassName)}
+				name={name}
+			/>
 		</div>
 	);
 };

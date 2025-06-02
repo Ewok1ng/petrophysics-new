@@ -1,11 +1,10 @@
 .experts {
-	&__inner {
-		display: grid;
-		grid-template-columns: 490rem auto;
-	}
+	display: grid;
+	grid-template-columns: 26% auto;
+	padding: 0 20rem;
 
 	&__title {
-		font-size: 55rem;
+		font-size: 48rem;
 		font-weight: 400;
 		color: $white-color;
 	}
@@ -30,7 +29,11 @@
 	&__list {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
-		gap: 30rem;
+		gap: 20rem;
+
+		&--main {
+			grid-template-columns: repeat(1, 1fr);
+		}
 	}
 }
 

@@ -18,7 +18,7 @@
 		background-size: cover;
 	}
 
-	&__inner {
+	&__wrapper {
 		position: absolute;
 		z-index: 1000;
 		right: 0;
@@ -37,9 +37,49 @@
 
 	&__title {
 		display: none;
+
+		padding: 0 60rem;
+
 		font-weight: 400;
 		color: $gray-color-2;
 		text-transform: uppercase;
+	}
+}
+
+.link {
+	position: absolute;
+	right: 20rem;
+	bottom: 20%;
+
+	display: flex;
+	gap: 20rem;
+	align-items: center;
+	justify-content: center;
+
+	max-width: 280rem;
+	padding: 15rem 20rem;
+
+	color: $black-color;
+	text-decoration: none;
+
+	background: $white-color;
+	border: 1rem solid $black-color;
+
+	transition: all 0.3s ease-in-out;
+
+	&__text {
+		font-size: 48rem;
+		line-height: 1;
+	}
+
+	&__icon {
+		width: 40rem;
+		height: 40rem;
+	}
+
+	&:hover {
+		color: $white-color;
+		background: $black-color;
 	}
 }
 

@@ -32,8 +32,8 @@ export const PARTNERS: readonly IPartner[] = [
 	{ id: 25, name: 'partners-irkutskneft' },
 	{ id: 26, name: 'partners-innopolis' },
 	{ id: 27, name: 'partners-zarubezhneft' },
-	{ id: 28, name: 'partners-gazpromneft', className: 'gazprom' },
-	{ id: 29, name: 'partners-gazprom', className: 'gazprom' },
+	// { id: 28, name: 'partners-gazpromneft', className: 'gazprom' },
+	// { id: 29, name: 'partners-gazprom', className: 'gazprom' },
 	{ id: 30, name: 'partners-vniineft' },
 
 	{ id: 31, name: 'partners-schlumberger' },

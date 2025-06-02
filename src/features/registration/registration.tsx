@@ -15,9 +15,15 @@ interface Props
 	> {
 	className?: string;
 	border?: boolean;
+	text?: string;
 }
 
-export const Registration = ({ className, border = true, ...props }: Props) => {
+export const Registration = ({
+	className,
+	border = true,
+	text = 'Регистрация',
+	...props
+}: Props) => {
 	return (
 		<Link
 			className={clsx(
@@ -31,7 +37,7 @@ export const Registration = ({ className, border = true, ...props }: Props) => {
 			target="_blank"
 			{...props}
 		>
-			<span className={styles.registration__title}>Регистрация</span>
+			<span className={styles.registration__title}>{text}</span>
 			<SvgIcon className={styles.registration__icon} name="arrow" />
 		</Link>
 	);

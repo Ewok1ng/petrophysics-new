@@ -19,7 +19,7 @@ export const CONFERENCES: readonly IConference[] = [
 		date: '27-28 мая 2025',
 		dateColor: 'red',
 		description: 'V Международная научно-техническая конференция',
-		title: 'ТРУДНОИЗВЛЕКАЕМЫЕ ЗАПАСЫ НЕФТИ',
+		title: 'Химические методы увеличения нефтеотдачи',
 		iconName: 'conferences-2',
 		link: 'https://cheorconference.ru/about'
 	},
@@ -31,7 +31,7 @@ export const CONFERENCES: readonly IConference[] = [
 		dateColor: 'green',
 		description: 'Техническая сессия',
 		title: 'РАЗРАБОТКА ГАЗОКОНДЕНСАТНЫХ МЕСТОРОЖДЕНИЙ',
-		iconName: 'conferences-3',
+		iconName: 'conferences-3-new',
 		link: 'https://t.me/+f4bvVmRZzVc2NjFi'
 	},
 	{
@@ -66,7 +66,7 @@ export const CONFERENCES: readonly IConference[] = [
 		dateColor: 'green',
 		description: 'II Международная научно-практическая конференция ',
 		title: 'Карбонатные отложения',
-		iconName: 'conferences-6',
+		iconName: 'conferences-6-new',
 		link: 'https://karb0n.ru/'
 	}
 ];

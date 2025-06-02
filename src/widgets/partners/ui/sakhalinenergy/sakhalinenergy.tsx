@@ -1,8 +1,14 @@
+import clsx from 'clsx';
+
 import styles from './sakhalinenergy.module.scss';
 
-export const Sakhalinenergy = () => {
+interface Props {
+	className?: string;
+}
+
+export const Sakhalinenergy = ({ className }: Props) => {
 	return (
-		<div className={styles.item}>
+		<div className={clsx(styles.item, className)}>
 			<svg
 				className={styles.icon}
 				width="170"

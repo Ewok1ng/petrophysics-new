@@ -1,3 +1,7 @@
+import { Link } from 'react-router-dom';
+
+import { SvgIcon } from '@shared/ui';
+
 import { DIRECTIONS } from '../../lib';
 
 import { DirectionItem } from '../direction-item';
@@ -8,18 +12,24 @@ export const Directions = () => {
 	return (
 		<section id="directions" className={styles.directions}>
 			<div className={styles.directions__background}></div>
-			<div className={styles.container}>
-				<div className={styles.directions__inner}>
-					<h3 className={styles.directions__title}>НАПРАВЛЕНИЯ</h3>
-					<div className={styles.directions__items}>
-						{DIRECTIONS.map(({ id, ...props }) => (
-							<DirectionItem
-								className={styles.directions__item}
-								key={id}
-								{...props}
-							/>
-						))}
-					</div>
+			<div className={styles.directions__wrapper}>
+				<h3 className={styles.directions__title}>НАПРАВЛЕНИЯ</h3>
+				<div className={styles.directions__items}>
+					{DIRECTIONS.map(({ id, ...props }) => (
+						<DirectionItem
+							className={styles.directions__item}
+							key={id}
+							{...props}
+						/>
+					))}
+					<Link
+						className={styles.link}
+						to="https://geomodel.ru/petrophysicsxxi#themes"
+						target="_blank"
+					>
+						<span className={styles.link__text}>Подать тезисы</span>
+						<SvgIcon className={styles.link__icon} name="arrow" />
+					</Link>
 				</div>
 			</div>
 		</section>

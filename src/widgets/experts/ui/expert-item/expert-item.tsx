@@ -37,8 +37,7 @@ export const ExpertItem = ({ imageSrc, title, description }: Props) => {
 			)}
 			<div className={styles.expert__info}>
 				<h5 className={styles.expert__title}>
-					<div>{firstName}</div>
-					<div>{lastName}</div>
+					{firstName} {lastName}
 				</h5>
 				<p className={styles.expert__description}>{description}</p>
 			</div>

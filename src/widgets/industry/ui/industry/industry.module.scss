@@ -1,9 +1,47 @@
 .industry {
-	padding: 15rem 0;
 	background: $white-color;
 
-	&__background {
+	&__info {
+		display: grid;
+		grid-template-columns: repeat(2, 50%);
+		background: $black-color;
+		border-bottom: 1rem solid $black-color;
+	}
+
+	&__title {
+		padding: 20rem;
+
+		font-size: 75rem;
+		font-weight: 400;
+		text-transform: uppercase;
+
+		background: $white-color;
+		border-right: 1rem solid $black-color;
+	}
+
+	&__about {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		padding: 20rem;
+	}
+
+	&__description {
+		font-size: 16rem;
+		font-weight: 400;
+		line-height: 1.5;
+		color: $white-color;
+		text-transform: uppercase;
+	}
+
+	&__items {
+		display: grid;
+		grid-template-columns: repeat(2, 50%);
+	}
+
+	&__item_bg {
 		position: absolute;
+		z-index: 1;
 		inset: 0;
 
 		opacity: 0;
@@ -14,7 +52,8 @@
 
 		&--kfu {
 			background-image: url('../../../../shared/assets/images/industry/kfu.jpg');
-			background-position-y: 25%;
+			background-position-x: 10%;
+			background-position-y: 10%;
 		}
 
 		&--agi {
@@ -23,66 +62,38 @@
 		}
 	}
 
-	&__title,
-	&__subtitle {
-		font-size: 75rem;
-		font-weight: 400;
-		color: $black-color;
-		text-align: left;
-		text-transform: uppercase;
-	}
-
-	&__title {
-		flex: 1 0 965rem;
-		margin: 25rem 0;
-	}
-
-	&__subtitle {
-		max-width: 900rem;
-		text-align: right;
-		opacity: 1;
-		transition: opacity 0.5s ease-in-out;
-	}
-
-	&__row {
+	&__item {
+		cursor: pointer;
 		position: relative;
-		border-top: 1rem solid $black-color;
+		padding: 20rem 20rem 45rem;
 
-		&:last-child {
-			border-bottom: 1rem solid $black-color;
+		&:first-child {
+			border-right: 1rem solid $black-color;
 		}
 
 		&:hover {
-			.industry__background {
+			.industry__item_bg {
 				opacity: 1;
 			}
-
-			.industry__subtitle {
-				opacity: 0;
-			}
 		}
 	}
 
-	&__row_inner {
+	&__subtitle {
 		position: relative;
-		z-index: 100;
+		z-index: 10;
 
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
+		margin-bottom: 30rem;
 
-		&--content {
-			cursor: pointer;
-			height: 252rem;
-		}
-	}
-
-	&__description {
-		flex: 0 1 auto;
-		font-size: 16rem;
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 1.5;
+		text-transform: uppercase;
 	}
 
 	&__icons {
+		position: relative;
+		z-index: 10;
+
 		display: flex;
 		gap: 100rem;
 		align-items: center;

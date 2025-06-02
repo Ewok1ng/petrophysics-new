@@ -24,7 +24,66 @@ export const Header = () => {
 	}, [isBurgerMenuActive]);
 
 	return (
-		<header className={styles.header}>
+		<>
+			<header className={styles.header}>
+				<div className={styles.header__wrapper}>
+					<button className={styles.burger_button} onClick={toggleBurgerMenu}>
+						<SvgIcon className={styles.burger_button__icon} name="burger" />
+					</button>
+					<Link className={styles.header__link} to="/">
+						<Logo className={styles.header__logo} />
+					</Link>
+
+					<nav className={styles.menu}>
+						<ul className={styles.menu__list}>
+							<li className={styles.menu__list_item}>
+								<a className={styles.menu__list_link} href="/#directions">
+									Направления
+								</a>
+							</li>
+							<li className={styles.menu__list_item}>
+								<a className={styles.menu__list_link} href="/#conditions">
+									Правила и условия
+								</a>
+							</li>
+							<li className={styles.menu__list_item}>
+								<a className={styles.menu__list_link} href="/#programm">
+									Программа
+								</a>
+							</li>
+							<li
+								className={clsx(
+									styles.menu__list_item,
+									styles['menu__list_item--multiple']
+								)}
+							>
+								<a className={styles.menu__list_link} href="/#contacts">
+									Контакты
+								</a>
+								<Link
+									className={styles.menu__list_link}
+									to="https://api.whatsapp.com/send/?phone=79520369998"
+									target="_blank"
+								>
+									<SvgIcon className={styles.menu__list_icon} name="whatsapp" />
+								</Link>
+								<Link
+									className={styles.menu__list_link}
+									to="https://t.me/pp21_conf"
+									target="_blank"
+								>
+									<SvgIcon className={styles.menu__list_icon} name="tg" />
+								</Link>
+							</li>
+						</ul>
+					</nav>
+					<Registration
+						className={styles.registration}
+						text="Подать тезисы"
+						border={false}
+					/>
+				</div>
+			</header>
 			<div
 				className={clsx(styles.burger_menu, {
 					[styles['burger_menu--active']]: isBurgerMenuActive
@@ -140,60 +199,6 @@ export const Header = () => {
 					/>
 				</div>
 			</div>
-			<div className={styles.container}>
-				<div className={styles.header__inner}>
-					<button className={styles.burger_button} onClick={toggleBurgerMenu}>
-						<SvgIcon className={styles.burger_button__icon} name="burger" />
-					</button>
-					<Link className={styles.header__link} to="/">
-						<Logo className={styles.header__logo} />
-					</Link>
-
-					<nav className={styles.menu}>
-						<ul className={styles.menu__list}>
-							<li className={styles.menu__list_item}>
-								<a className={styles.menu__list_link} href="/#directions">
-									Направления
-								</a>
-							</li>
-							<li className={styles.menu__list_item}>
-								<a className={styles.menu__list_link} href="/#conditions">
-									Условия
-								</a>
-							</li>
-							<li className={styles.menu__list_item}>
-								<a className={styles.menu__list_link} href="/#programm">
-									Программа
-								</a>
-							</li>
-							<li className={styles.menu__list_item}>
-								<a className={styles.menu__list_link} href="/#contacts">
-									Контакты
-								</a>
-							</li>
-							<li className={styles.menu__list_item}>
-								<Link
-									className={styles.menu__list_link}
-									to="https://api.whatsapp.com/send/?phone=79520369998"
-									target="_blank"
-								>
-									<SvgIcon className={styles.menu__list_icon} name="whatsapp" />
-								</Link>
-							</li>
-							<li className={styles.menu__list_item}>
-								<Link
-									className={styles.menu__list_link}
-									to="https://t.me/pp21_conf"
-									target="_blank"
-								>
-									<SvgIcon className={styles.menu__list_icon} name="tg" />
-								</Link>
-							</li>
-						</ul>
-					</nav>
-					<Registration className={styles.registration} />
-				</div>
-			</div>
-		</header>
+		</>
 	);
 };

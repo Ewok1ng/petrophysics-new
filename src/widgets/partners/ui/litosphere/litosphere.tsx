@@ -1,8 +1,14 @@
+import clsx from 'clsx';
+
 import styles from './litosphere.module.scss';
 
-export const Litosphere = () => {
+interface Props {
+	className?: string;
+}
+
+export const Litosphere = ({ className }: Props) => {
 	return (
-		<div className={styles.item}>
+		<div className={clsx(styles.item, className)}>
 			<svg
 				width="170"
 				height="44"

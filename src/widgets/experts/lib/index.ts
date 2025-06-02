@@ -1,1 +1,1 @@
-export { EXPERTS } from './constants';
+export { MAIN_EXPERTS, EXPERTS } from './constants';
