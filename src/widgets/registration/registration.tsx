@@ -6,6 +6,8 @@ import { SvgIcon } from '@shared/ui';
 import styles from './registration.module.scss';
 
 export const Registration = () => {
+	const text = 'Подать тезисы';
+
 	return (
 		<Marquee>
 			<Link
@@ -13,34 +15,34 @@ export const Registration = () => {
 				to="https://geomodel.ru/petrophysicsxxi#themes"
 				target="_blank"
 			>
-				<span className={styles.registration__title}>Регистрация</span>
+				<span className={styles.registration__title}>{text}</span>
 				<SvgIcon className={styles.registration__icon} name="arrow" />
 
-				<span className={styles.registration__title}>Регистрация</span>
+				<span className={styles.registration__title}>{text}</span>
 				<SvgIcon className={styles.registration__icon} name="arrow" />
 
-				<span className={styles.registration__title}>Регистрация</span>
+				<span className={styles.registration__title}>{text}</span>
 				<SvgIcon className={styles.registration__icon} name="arrow" />
 
-				<span className={styles.registration__title}>Регистрация</span>
+				<span className={styles.registration__title}>{text}</span>
 				<SvgIcon className={styles.registration__icon} name="arrow" />
 
-				<span className={styles.registration__title}>Регистрация</span>
+				<span className={styles.registration__title}>{text}</span>
 				<SvgIcon className={styles.registration__icon} name="arrow" />
 
-				<span className={styles.registration__title}>Регистрация</span>
+				<span className={styles.registration__title}>{text}</span>
 				<SvgIcon className={styles.registration__icon} name="arrow" />
 
-				<span className={styles.registration__title}>Регистрация</span>
+				<span className={styles.registration__title}>{text}</span>
 				<SvgIcon className={styles.registration__icon} name="arrow" />
 
-				<span className={styles.registration__title}>Регистрация</span>
+				<span className={styles.registration__title}>{text}</span>
 				<SvgIcon className={styles.registration__icon} name="arrow" />
 
-				<span className={styles.registration__title}>Регистрация</span>
+				<span className={styles.registration__title}>{text}</span>
 				<SvgIcon className={styles.registration__icon} name="arrow" />
 
-				<span className={styles.registration__title}>Регистрация</span>
+				<span className={styles.registration__title}>{text}</span>
 				<SvgIcon className={styles.registration__icon} name="arrow" />
 			</Link>
 		</Marquee>

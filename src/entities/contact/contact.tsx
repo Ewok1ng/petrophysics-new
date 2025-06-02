@@ -1,15 +1,11 @@
-import { DetailedHTMLProps, HTMLAttributes, ReactNode } from 'react';
+import { AnchorHTMLAttributes, ReactNode } from 'react';
 import clsx from 'clsx';
 
 import { SvgIcon } from '@shared/ui';
 
 import styles from './contact.module.scss';
 
-interface Props
-	extends Omit<
-		DetailedHTMLProps<HTMLAttributes<HTMLAnchorElement>, HTMLAnchorElement>,
-		'title'
-	> {
+interface Props extends Omit<AnchorHTMLAttributes<HTMLAnchorElement>, 'title'> {
 	variant?: 'dark' | 'light';
 	decoration?: 'default' | 'underline';
 	className?: string;
@@ -40,6 +36,7 @@ export const Contact = ({
 				className
 			)}
 			href={href}
+			target=""
 			{...props}
 		>
 			<SvgIcon className={styles.contact__icon} name={iconName} />

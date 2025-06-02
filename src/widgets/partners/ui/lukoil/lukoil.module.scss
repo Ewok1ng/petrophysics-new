@@ -1,9 +1,9 @@
-.blue {
+.back {
 	color: $black-color;
 	transition: color 0.3s ease-in-out;
 }
 
-.star {
+.text {
 	color: $black-color;
 	transition: color 0.3s ease-in-out;
 }
@@ -17,13 +17,12 @@
 	padding: 30rem;
 
 	&:hover {
-		.blue {
-			color: #0f1740;
-			transition: color 0.3s ease-in-out;
+		.back {
+			color: #d2233c;
 		}
 
-		.star {
-			color: #f7a824;
+		.text {
+			color: #221f1c;
 		}
 	}
 }

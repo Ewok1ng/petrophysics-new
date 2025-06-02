@@ -6,9 +6,8 @@
 	min-width: 0;
 	padding: 30rem;
 
-	border: 1rem solid #e0e0e0;
-
 	&__icon {
+		max-height: 90%;
 		filter: brightness(0);
 		transition: filter 0.3s;
 

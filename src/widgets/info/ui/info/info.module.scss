@@ -1,13 +1,11 @@
 .info {
-	padding: 15rem 0;
 	font-size: 20rem;
 	color: $black-color;
 	background: $white-color;
 
 	&__inner {
 		display: grid;
-		grid-template-columns: 320rem auto;
-		gap: 60rem;
+		grid-template-columns: 26% auto;
 	}
 
 	&__column {
@@ -18,6 +16,7 @@
 
 		&--info {
 			justify-content: start;
+			padding: 20rem 0 0 20rem;
 			border-right: 1rem solid $black-color;
 		}
 	}
@@ -27,7 +26,6 @@
 	}
 
 	&__title {
-		margin-top: 70rem;
 		margin-bottom: 40rem;
 
 		font-size: 30rem;
@@ -46,12 +44,17 @@
 	}
 
 	&__contacts_title {
-		margin-bottom: 10rem;
+		margin-bottom: 15rem;
 
 		font-size: 16rem;
-		font-weight: 700;
+		font-weight: 400;
 		line-height: 1.5;
 		color: $black-color;
+		text-transform: uppercase;
+
+		&--operator {
+			margin-bottom: 0;
+		}
 	}
 
 	&__contacts_group_link {
@@ -59,6 +62,7 @@
 		line-height: 1.5;
 		color: $black-color;
 		text-decoration: underline;
+		text-transform: uppercase;
 	}
 
 	&__list {
@@ -76,20 +80,22 @@
 		align-items: center;
 		justify-content: space-between;
 
-		font-size: 100rem;
+		font-size: 48rem;
 		color: $black-color;
 		text-decoration: none;
 		text-transform: uppercase;
 	}
 
 	&__registration_icon {
-		width: 100rem;
-		height: 100rem;
+		width: 80rem;
+		height: 80rem;
 	}
 
 	&__text {
-		font-size: 16rem;
+		font-size: 13rem;
+		line-height: 1.2;
 		color: $black-color;
+		text-transform: uppercase;
 
 		&--outlined {
 			text-decoration: underline;
@@ -105,20 +111,22 @@
 .table {
 	display: flex;
 	flex-direction: column;
-	width: 100%;
+	width: 80%;
 	margin-bottom: 15rem;
 
 	&__title {
 		margin-bottom: 10rem;
+		font-size: 13rem;
+		font-weight: 400;
 	}
 
 	&__row {
 		display: flex;
 		width: 100%;
-		border-top: 1rem solid $gray-color-3;
+		border-top: 1rem solid $black-color;
 
 		&:last-child {
-			border-bottom: 1rem solid $gray-color-3;
+			border-bottom: 1rem solid $black-color;
 		}
 	}
 
@@ -132,14 +140,15 @@
 		min-height: 60rem;
 		padding: auto 0;
 
-		font-size: 16rem;
+		font-size: 13rem;
 		font-weight: 400;
 		line-height: 1.2;
+		text-transform: uppercase;
 
-		border-left: 1rem solid $gray-color-3;
+		border-left: 1rem solid $black-color;
 
 		&:last-child {
-			border-right: 1rem solid $gray-color-3;
+			border-right: 1rem solid $black-color;
 		}
 	}
 }
@@ -147,7 +156,7 @@
 .schedule {
 	&__text {
 		margin-bottom: 10rem;
-		font-size: 16rem;
+		font-size: 13rem;
 	}
 
 	&__table {
@@ -160,10 +169,12 @@
 		margin-bottom: 10rem;
 		padding: 5rem 0;
 
-		font-weight: 700;
+		font-size: 13rem;
+		font-weight: 400;
+		text-transform: uppercase;
 
-		border-top: 1rem solid $gray-color-3;
-		border-bottom: 1rem solid $gray-color-3;
+		border-top: 1rem solid $black-color;
+		border-bottom: 1rem solid $black-color;
 	}
 
 	&__list {
@@ -176,39 +187,20 @@
 	&__list_item {
 		position: relative;
 
-		padding-left: 20rem;
+		display: flex;
+		gap: 10rem;
+		align-items: center;
 
-		font-size: 16rem;
+		font-size: 13rem;
 		font-weight: 400;
 		line-height: 1.5;
+		text-transform: uppercase;
+	}
 
-		&::before {
-			content: '';
-
-			position: absolute;
-			top: 50%;
-			left: 0;
-			transform: translateY(-50%);
-
-			width: 10rem;
-			height: 10rem;
-
-			border: 1rem solid $black-color;
-			border-radius: 50%;
-		}
-
-		&--disabled {
-			padding-left: 0;
-			color: $gray-color-4;
-
-			&::before {
-				content: none;
-			}
-
-			b {
-				color: $black-color;
-			}
-		}
+	&__time {
+		display: flex;
+		gap: 5rem;
+		align-items: center;
 	}
 }
 
@@ -240,17 +232,61 @@
 		height: 20rem;
 		color: $black-color;
 		transition: 0.3s all ease-in-out;
+
+		&--download {
+			transform: rotate(135deg);
+		}
 	}
 }
 
-.rules {
+.deadline {
 	margin-bottom: 10rem;
+	font-size: 12rem;
 }
 
-.payment {
+.links {
 	display: flex;
 	gap: 50rem;
 	align-items: center;
+}
+
+.payment {
+	font-size: 14rem;
+	font-weight: 400;
+	text-transform: uppercase;
+}
+
+.rules {
+	margin-bottom: 20rem;
+
+	&:nth-child(2) {
+		margin-bottom: 0;
+	}
+
+	&__title {
+		font-size: 16rem;
+		font-weight: 400;
+		line-height: 1.5;
+		text-transform: uppercase;
+	}
+
+	&__description {
+		font-size: 13rem;
+
+		p + p {
+			margin-top: 5rem;
+		}
+
+		ul {
+			margin: 5rem 0;
+			padding-left: 30rem;
+			list-style: disc;
+		}
+	}
+
+	a {
+		color: inherit;
+	}
 }
 
 @media (width <= 1200px) {
@@ -289,6 +325,20 @@
 	.info__registration_icon {
 		width: 50rem;
 		height: 50rem;
+	}
+
+	.table {
+		width: 100%;
+	}
+
+	.info__title,
+	.info__contacts_title,
+	.info__group {
+		display: none;
+	}
+
+	.schedule__table {
+		grid-template-columns: 1fr;
 	}
 }
 

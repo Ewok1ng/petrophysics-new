@@ -12,67 +12,77 @@
 	}
 
 	&__main {
+		display: flex;
+		flex-direction: column;
 		flex-grow: 1;
+		gap: 30rem;
+		align-items: center;
+
 		width: 100%;
 		margin: 30rem 0 60rem;
 	}
 
-	&__main_inner {
-		display: flex;
-		flex-direction: column;
-		gap: 30rem;
-		align-items: center;
-	}
-
 	&__footer {
-		display: flex;
+		display: grid;
+		grid-template-columns: repeat(2, 50%);
 		align-items: center;
-		justify-content: space-between;
 
 		width: 100%;
-		height: 150rem;
 
 		border-top: 1rem solid $white-color;
 		border-bottom: 1rem solid $white-color;
 	}
 
 	&__column {
-		display: flex;
-		flex-direction: column;
-		gap: 10rem;
-
 		height: 100%;
-		padding: 32rem 38rem;
-
 		color: $white-color;
 
-		&:nth-child(2) {
-			flex-shrink: 0;
+		&--main {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+
+			padding: 20rem 15rem;
+
 			border-right: 1rem solid $white-color;
-			border-left: 1rem solid $white-color;
+		}
+
+		&--secondary {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
 		}
 	}
 
 	&__date {
-		font-size: 32rem;
-		font-weight: 700;
+		margin-bottom: 10rem;
+		font-size: 48rem;
+		font-weight: 400;
 	}
 
 	&__address {
-		font-size: 24rem;
+		font-size: 16rem;
 	}
 
-	&__conference {
-		font-size: 24rem;
+	&__deadline {
+		display: flex;
+		flex-direction: column;
+		gap: 10rem;
+		align-items: center;
+		justify-content: center;
+	}
+
+	&__deadline_date {
+		font-size: 48rem;
+		font-weight: 400;
+	}
+
+	&__deadline_text {
+		font-size: 16rem;
+		line-height: 1.5;
 		text-transform: uppercase;
 	}
 
-	&__timer {
-		font-size: 30rem;
-		font-weight: 700;
-	}
-
-	&__programm {
+	&__link {
 		display: flex;
 		gap: 20rem;
 		align-items: center;
@@ -95,17 +105,23 @@
 		}
 	}
 
-	&__programm_text {
-		font-size: 24rem;
+	&__link_text {
+		font-size: 16rem;
+		line-height: 1.5;
 		text-transform: uppercase;
 	}
 
-	&__programm_icon {
+	&__link_icon {
 		transform: rotate(135deg);
 		flex-shrink: 0;
 		width: 20rem;
 		height: 20rem;
 	}
+}
+
+.timer {
+	font-size: 30rem;
+	font-weight: 700;
 }
 
 @media (width <= 1200px) {
@@ -116,12 +132,16 @@
 
 @media (width <= 900px) {
 	.petrophysics__footer {
-		flex-direction: column;
+		grid-template-columns: repeat(1, 100%);
 		height: auto;
 	}
 
 	.petrophysics__column {
 		width: 100%;
+
+		&--main {
+			border-right: none;
+		}
 
 		&:nth-child(2) {
 			border-top: 1rem solid $white-color;
@@ -129,5 +149,10 @@
 			border-bottom: 1rem solid $white-color;
 			border-left: none;
 		}
+	}
+
+	.petrophysics__link {
+		border: none;
+		border-left: 1rem solid $white-color;
 	}
 }

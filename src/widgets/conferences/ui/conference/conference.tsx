@@ -34,8 +34,10 @@ export const Conference = ({
 			target="_blank"
 		>
 			<SvgIcon className={clsx(styles.icon, iconClassName)} name={iconName} />
-			<h4 className={styles.title}>{title}</h4>
-			<p className={styles.description}>{description}</p>
+			<div className={styles.about}>
+				<h4 className={styles.title}>{title}</h4>
+				<p className={styles.description}>{description}</p>
+			</div>
 			<div className={styles.info}>
 				<p className={styles.date}>{date}</p>
 				<p className={styles.city}>г. {city}</p>
