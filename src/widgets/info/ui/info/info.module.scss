@@ -215,22 +215,26 @@
 
 	font-size: 16rem;
 	color: $white-color;
-	text-decoration: underline;
+	color: $black-color;
 
-	background: transparent;
+	background: $white-color;
 	border: 1rem solid $black-color;
 
 	transition: 0.3s all ease-in-out;
 
+	&:hover {
+		color: $white-color;
+		background: $black-color;
+	}
+
 	&__title {
-		color: $black-color;
+		text-decoration: underline;
 		transition: 0.3s all ease-in-out;
 	}
 
 	&__icon {
 		width: 20rem;
 		height: 20rem;
-		color: $black-color;
 		transition: 0.3s all ease-in-out;
 
 		&--download {

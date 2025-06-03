@@ -69,10 +69,16 @@
 	text-decoration: none;
 	text-transform: uppercase;
 
+	transition: all 0.3s ease-in-out;
+
+	&:hover {
+		color: $white-color;
+		background: $black-color;
+	}
+
 	&__icon {
 		width: 80rem;
 		height: 80rem;
-		color: $black-color;
 	}
 }
 

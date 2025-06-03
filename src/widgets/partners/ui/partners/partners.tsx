@@ -44,7 +44,11 @@ export const Partners = () => {
 							/>
 						);
 					})}
-					<Link className={clsx(styles.link, styles.partner)} to="#">
+					<Link
+						className={clsx(styles.link, styles.partner)}
+						to="https://geomodel.ru/petrophysicsxxi#themes"
+						target="_blank"
+					>
 						<span className={styles.link_text}>
 							Присоединиться к конференции
 						</span>

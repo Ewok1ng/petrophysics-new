@@ -103,7 +103,7 @@ export const Info = () => {
 				</div>
 				<div className={styles.info__column}>
 					<ul className={styles.info__list}>
-						<li className={styles.info__list_item}>
+						<li id="conditions" className={styles.info__list_item}>
 							<Accordion title="Правила подачи публикации">
 								{RULES.map(rule => (
 									<div key={rule.id} className={styles.rules}>
@@ -142,10 +142,12 @@ export const Info = () => {
 								<div className={styles.links}>
 									<Link
 										className={styles.link}
-										to="https://geomodel.ru/petrophysicsxxi#themes"
+										to="https://docs.yandex.ru/docs/view?url=ya-browser%3A%2F%2F4DT1uXEPRrJRXlUFoewruIR2IkxEdU5xgF66ho43tWsml5jSU0tpdUOPSwSe-5g8pirdoQgKwaaDe-Nv9vPvCa_mySKpgEUOkyweDVIo8vQHvPTvaUIkC9c75KkQHpQZsYjL-3aaWVwZ7WLoJUYXtw%3D%3D%3Fsign%3DTrKAwxH5OapEphK0lVd9fWUM9EZpaodiKUG--kMvo7I%3D&name=Petrophysics25_Conference_template.docx&nosw=1"
 										target="_blank"
 									>
-										<span className={styles.link__title}>Подать тезисы</span>
+										<span className={styles.link__title}>
+											Скачать шаблоны тезисов
+										</span>
 										<SvgIcon
 											className={clsx(
 												styles.link__icon,
@@ -165,7 +167,7 @@ export const Info = () => {
 								</div>
 							</Accordion>
 						</li>
-						<li id="conditions" className={styles.info__list_item}>
+						<li className={styles.info__list_item}>
 							<Accordion title="Оплата участия">
 								<h5 className={styles.table__title}>
 									Стоимость участия в рублях, включая НДС 20%
@@ -254,11 +256,12 @@ export const Info = () => {
 									Участники самостоятельно оплачивают проживание и транспортные
 									расходы при переезде.{' '}
 									<Link
-										to="https://drive.google.com/file/d/1IIS02r1dmO-BQuLrsK2j56HSBaLuYV0m/view?usp=sharing"
 										className={clsx(
 											styles.info__text,
 											styles['info__text--outlined']
 										)}
+										to="https://drive.google.com/file/d/1IIS02r1dmO-BQuLrsK2j56HSBaLuYV0m/view?usp=sharing"
+										target="_blank"
 									>
 										Основные варианты размещения в отелях, которые мы
 										рекомендуем, можно найти <b>здесь</b>

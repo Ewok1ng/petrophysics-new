@@ -1,5 +1,4 @@
 import { ReactNode } from 'react';
-import { Link } from 'react-router-dom';
 import clsx from 'clsx';
 
 import { SvgIcon, Title } from '@shared/ui';
@@ -46,12 +45,12 @@ export const Petrophysics = ({ headerSlot }: Props) => {
 							крайний срок подачи тезисов
 						</p>
 					</div>
-					<Link className={styles.petrophysics__link} to="#">
+					<a className={styles.petrophysics__link} href="#conditions">
 						<span className={styles.petrophysics__link_text}>
 							Правила и условия публикации
 						</span>
 						<SvgIcon className={styles.petrophysics__link_icon} name="arrow" />
-					</Link>
+					</a>
 				</div>
 			</div>
 		</section>
