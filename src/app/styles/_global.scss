@@ -39,26 +39,20 @@ body {
 	background: $black-color;
 }
 
-@media (width <= 1200px) {
-	html {
-		font-size: calc(1vw / 12);
-	}
-}
-
 @media (width <= 720px) {
 	html {
 		font-size: calc(1vw / 7.2);
 	}
 }
 
-@media (width <= 480px) {
+@media (width <= 560px) {
 	html {
-		font-size: calc(1vw / 4.8);
+		font-size: calc(1vw / 5.6);
 	}
 }
 
-@media (width <= 375px) {
+@media (width <= 480px) {
 	html {
-		font-size: calc(1vw / 3.75);
+		font-size: calc(1vw / 4.8);
 	}
 }

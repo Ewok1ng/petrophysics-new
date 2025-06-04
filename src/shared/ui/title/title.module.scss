@@ -48,19 +48,17 @@
 	}
 }
 
-@media (width <= 1200px) {
-	.title {
-		font-size: 150rem;
-	}
-}
-
 @media (width <= 720px) {
 	.title {
 		font-size: 80rem;
 	}
+
+	.title__shadows {
+		display: none;
+	}
 }
 
-@media (width <= 480px) {
+@media (width <= 560px) {
 	.title {
 		font-size: 54rem;
 	}

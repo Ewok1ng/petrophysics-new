@@ -1,9 +1,6 @@
 import { useEffect, useState } from 'react';
 import clsx from 'clsx';
 
-// eslint-disable-next-line import/no-internal-modules
-// import ClockImg from '@shared/assets/images/clock.png';
-
 import styles from './timer.module.scss';
 
 interface Props {

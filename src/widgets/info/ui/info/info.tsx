@@ -1,7 +1,6 @@
+import React from 'react';
 import { Link } from 'react-router-dom';
 import clsx from 'clsx';
-
-import React from 'react';
 
 import { Contact } from '@entities/contact';
 import { SvgIcon } from '@shared/ui';
