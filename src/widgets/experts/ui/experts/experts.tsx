@@ -1,3 +1,4 @@
+import { useRef, useState } from 'react';
 import clsx from 'clsx';
 
 import { EXPERTS, MAIN_EXPERTS } from '../../lib';
@@ -6,8 +7,26 @@ import { ExpertItem } from '../expert-item';
 import styles from './experts.module.scss';
 
 export const Experts = () => {
+	const scrollTopRef = useRef<number>(0);
+
+	const [isExpertsHidden, setExpertsHidden] = useState<boolean>(true);
+
+	const toggleButton = () => {
+		if (isExpertsHidden) {
+			scrollTopRef.current = document.body.scrollTop;
+		} else {
+			document.body.scrollTop = scrollTopRef.current;
+		}
+
+		setExpertsHidden(prev => !prev);
+	};
+
 	return (
-		<section className={styles.experts}>
+		<section
+			className={clsx(styles.experts, {
+				[styles['experts--hidden']]: isExpertsHidden
+			})}
+		>
 			<div className={styles.experts__main}>
 				<h4 className={styles.experts__title}>ПРЕДСЕДАТЕЛИ</h4>
 				<div
@@ -25,6 +44,11 @@ export const Experts = () => {
 						<ExpertItem key={id} {...props} />
 					))}
 				</div>
+			</div>
+			<div className={styles.controls}>
+				<button className={styles.controls__button} onClick={toggleButton}>
+					{isExpertsHidden ? 'Показать еще' : 'Скрыть'}
+				</button>
 			</div>
 		</section>
 	);

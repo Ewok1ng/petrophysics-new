@@ -4,7 +4,7 @@
 
 	&__wrapper {
 		display: grid;
-		grid-template-columns: 25% auto 405rem;
+		grid-template-columns: 25% 2fr 1fr;
 		width: 100%;
 	}
 

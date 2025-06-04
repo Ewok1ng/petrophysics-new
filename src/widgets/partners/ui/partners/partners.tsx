@@ -1,5 +1,5 @@
+import { useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
-
 import clsx from 'clsx';
 
 import { SvgIcon } from '@shared/ui';
@@ -13,10 +13,28 @@ import { Sakhalinenergy } from '../sakhalinenergy';
 import styles from './partners.module.scss';
 
 export const Partners = () => {
+	const scrollTopRef = useRef<number>(0);
+
+	const [isPartnersHidden, setIsPartnersHidden] = useState<boolean>(true);
+
+	const toggleButton = () => {
+		if (isPartnersHidden) {
+			scrollTopRef.current = document.body.scrollTop;
+		} else {
+			document.body.scrollTop = scrollTopRef.current;
+		}
+
+		setIsPartnersHidden(prev => !prev);
+	};
+
 	return (
 		<section className={styles.partners}>
 			<div className={styles.partners__inner}>
-				<div className={styles.partners__items}>
+				<div
+					className={clsx(styles.partners__items, {
+						[styles['partners__items--hidden']]: isPartnersHidden
+					})}
+				>
 					<h4 className={clsx(styles.partners__title, styles.partner)}>
 						Участники конференции
 					</h4>
@@ -54,6 +72,11 @@ export const Partners = () => {
 						</span>
 						<SvgIcon className={styles.link__icon} name="arrow-top" />
 					</Link>
+					<div className={styles.controls}>
+						<button className={styles.controls__button} onClick={toggleButton}>
+							{isPartnersHidden ? 'Показать еще' : 'Скрыть'}
+						</button>
+					</div>
 				</div>
 			</div>
 		</section>

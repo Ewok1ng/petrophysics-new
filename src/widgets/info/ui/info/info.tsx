@@ -1,7 +1,6 @@
+import React from 'react';
 import { Link } from 'react-router-dom';
 import clsx from 'clsx';
-
-import React from 'react';
 
 import { Contact } from '@entities/contact';
 import { SvgIcon } from '@shared/ui';
@@ -104,7 +103,7 @@ export const Info = () => {
 				<div className={styles.info__column}>
 					<ul className={styles.info__list}>
 						<li id="conditions" className={styles.info__list_item}>
-							<Accordion title="Правила подачи публикации">
+							<Accordion key={1} title="Правила подачи публикации">
 								{RULES.map(rule => (
 									<div key={rule.id} className={styles.rules}>
 										<h3 className={styles.rules__title}>{rule.title}</h3>
@@ -130,7 +129,7 @@ export const Info = () => {
 							</Accordion>
 						</li>
 						<li className={styles.info__list_item}>
-							<Accordion title="Подать тезисы">
+							<Accordion key={2} title="Подать тезисы">
 								<div className={styles.deadline}>
 									Участникам, желающим представить свои доклады на конференции
 									«Петрофизика 21», необходимо <b>до 01.08.2025</b> пройти
@@ -168,7 +167,7 @@ export const Info = () => {
 							</Accordion>
 						</li>
 						<li className={styles.info__list_item}>
-							<Accordion title="Оплата участия">
+							<Accordion key={3} title="Оплата участия">
 								<h5 className={styles.table__title}>
 									Стоимость участия в рублях, включая НДС 20%
 								</h5>
@@ -187,17 +186,59 @@ export const Info = () => {
 										<div className={styles.table__column}>
 											Члены Ассоциации АГГИ
 										</div>
-										<div className={styles.table__column}>45 000</div>
-										<div className={styles.table__column}>59 000</div>
-										<div className={styles.table__column}>74 000</div>
+										<div
+											className={clsx(
+												styles.table__column,
+												styles['table__column--price']
+											)}
+										>
+											45 000
+										</div>
+										<div
+											className={clsx(
+												styles.table__column,
+												styles['table__column--price']
+											)}
+										>
+											59 000
+										</div>
+										<div
+											className={clsx(
+												styles.table__column,
+												styles['table__column--price']
+											)}
+										>
+											74 000
+										</div>
 									</div>
 									<div className={styles.table__row}>
 										<div className={styles.table__column}>
 											Обычная стоимость
 										</div>
-										<div className={styles.table__column}>54 000</div>
-										<div className={styles.table__column}>70 000</div>
-										<div className={styles.table__column}>88 000</div>
+										<div
+											className={clsx(
+												styles.table__column,
+												styles['table__column--price']
+											)}
+										>
+											54 000
+										</div>
+										<div
+											className={clsx(
+												styles.table__column,
+												styles['table__column--price']
+											)}
+										>
+											70 000
+										</div>
+										<div
+											className={clsx(
+												styles.table__column,
+												styles['table__column--price']
+											)}
+										>
+											88 000
+										</div>
 									</div>
 									<div className={styles.table__row}>
 										<div className={styles.table__column}>
@@ -205,9 +246,28 @@ export const Info = () => {
 											<span>студенты/аспиранты</span>
 											<span>неработающие пенсионеры</span>
 										</div>
-										<div className={styles.table__column}>17 000</div>
-										<div className={styles.table__column}>17 000</div>
-										<div className={styles.table__column}></div>
+										<div
+											className={clsx(
+												styles.table__column,
+												styles['table__column--price']
+											)}
+										>
+											17 000
+										</div>
+										<div
+											className={clsx(
+												styles.table__column,
+												styles['table__column--price']
+											)}
+										>
+											17 000
+										</div>
+										<div
+											className={clsx(
+												styles.table__column,
+												styles['table__column--price']
+											)}
+										></div>
 									</div>
 								</div>
 
@@ -215,7 +275,7 @@ export const Info = () => {
 							</Accordion>
 						</li>
 						<li id="programm" className={styles.info__list_item}>
-							<Accordion title="Программа конференции">
+							<Accordion key={4} title="Программа конференции">
 								<div className={styles.schedule}>
 									<p className={styles.schedule__text}>
 										Уважаемые участники, данная программа является
@@ -251,7 +311,7 @@ export const Info = () => {
 							</Accordion>
 						</li>
 						<li className={styles.info__list_item}>
-							<Accordion title="Отели">
+							<Accordion key={5} title="Отели">
 								<p className={styles.info__text}>
 									Участники самостоятельно оплачивают проживание и транспортные
 									расходы при переезде.{' '}

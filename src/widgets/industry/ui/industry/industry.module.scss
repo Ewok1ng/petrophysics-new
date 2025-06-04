@@ -135,6 +135,7 @@
 	}
 
 	.industry__title {
+		font-size: 48rem;
 		border-right: 0;
 	}
 
@@ -142,18 +143,15 @@
 		display: flex;
 
 		&--kfu {
-			width: 100%;
-			height: 98rem;
+			width: 200rem;
 		}
 
 		&--agi {
-			width: 100%;
-			height: 75rem;
+			width: 150rem;
 		}
 
 		&--geomodel {
-			width: 100%;
-			height: 75rem;
+			width: 250rem;
 		}
 	}
 }

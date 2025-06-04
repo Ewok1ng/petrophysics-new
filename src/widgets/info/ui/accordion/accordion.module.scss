@@ -1,5 +1,5 @@
 .accordion {
-	padding: 10rem 20rem 10rem 10rem;
+	padding: 10rem 20rem;
 
 	&__header {
 		cursor: pointer;
@@ -50,25 +50,23 @@
 
 	&__body {
 		overflow: hidden;
-		max-height: 0;
-		transition: max-height 0.3s ease-in-out;
+		display: grid;
+		grid-template-rows: 0fr;
+
+		padding: 10rem 0;
+
+		transition: grid-template-rows 0.3s ease-in-out;
+
+		&--active {
+			grid-template-rows: 1fr;
+		}
 	}
 
 	&__content {
-		padding-top: 10rem;
+		overflow: hidden;
+		min-height: 0;
 	}
 }
-
-// @media (width <= 1200px) {
-// 	.accordion__title {
-// 		font-size: 68rem;
-// 	}
-
-// 	.accordion__button {
-// 		width: 80rem;
-// 		height: 80rem;
-// 	}
-// }
 
 @media (width <= 740px) {
 	.accordion__title {

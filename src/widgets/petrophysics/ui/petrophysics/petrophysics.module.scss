@@ -131,6 +131,10 @@
 }
 
 @media (width <= 900px) {
+	.petrophysics {
+		min-height: auto;
+	}
+
 	.petrophysics__footer {
 		grid-template-columns: repeat(1, 100%);
 		height: auto;
@@ -154,5 +158,88 @@
 	.petrophysics__link {
 		border: none;
 		border-left: 1rem solid $white-color;
+	}
+}
+
+@media (width <= 720px) {
+	.petrophysics__column--main {
+		display: grid;
+		grid-template-columns: repeat(2, 50%);
+		padding: 20rem;
+	}
+
+	.petrophysics__date {
+		margin-bottom: 0;
+		text-align: left;
+	}
+
+	.petrophysics__address {
+		place-self: center;
+		font-size: 22rem;
+		text-align: left;
+		text-transform: uppercase;
+	}
+
+	.petrophysics__deadline {
+		display: grid;
+		grid-column: span 2;
+		grid-template-columns: repeat(2, 50%);
+		gap: 0;
+
+		padding: 20rem;
+	}
+
+	.petrophysics__deadline_date {
+		margin-bottom: 0;
+		text-align: left;
+	}
+
+	.petrophysics__deadline_text {
+		place-self: center;
+		font-size: 22rem;
+		text-align: left;
+	}
+
+	.petrophysics__link {
+		display: flex;
+		grid-column: span 2;
+		align-items: center;
+		justify-content: space-between;
+
+		padding: 20rem;
+
+		color: $black-color;
+
+		background: $white-color;
+		border-top: 1rem solid $black-color;
+		border-bottom: 1rem solid $black-color;
+
+		&:hover {
+			color: $white-color;
+			background: $black-color;
+			border-top: 1rem solid $white-color;
+		}
+	}
+
+	.petrophysics__link_text {
+		font-size: 22rem;
+	}
+
+	.petrophysics__link_icon {
+		width: 30rem;
+		height: 30rem;
+	}
+}
+
+@media (width <= 560rem) {
+	.petrophysics__date,
+	.petrophysics__deadline_date {
+		font-size: 36rem;
+	}
+
+	.petrophysics__address,
+	.petrophysics__deadline_text,
+	.petrophysics__link_text {
+		font-size: 18rem;
 	}
 }
