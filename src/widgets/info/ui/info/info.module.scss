@@ -5,7 +5,7 @@
 
 	&__inner {
 		display: grid;
-		grid-template-columns: 26% auto;
+		grid-template-columns: 26% 1fr;
 	}
 
 	&__column {
@@ -138,11 +138,14 @@
 		justify-content: center;
 
 		min-height: 60rem;
-		padding: auto 0;
 
 		font-size: 13rem;
 		font-weight: 400;
 		line-height: 1.2;
+
+		// padding: auto 0;
+
+		text-align: center;
 		text-transform: uppercase;
 
 		border-left: 1rem solid $black-color;
@@ -366,6 +369,16 @@
 		&::before {
 			width: 6rem;
 			height: 6rem;
+		}
+	}
+}
+
+@media (width <= 480px) {
+	.table__column {
+		font-size: 6rem;
+
+		&--price {
+			font-size: 12rem;
 		}
 	}
 }

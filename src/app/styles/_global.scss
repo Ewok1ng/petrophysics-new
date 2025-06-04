@@ -56,3 +56,9 @@ body {
 		font-size: calc(1vw / 4.8);
 	}
 }
+
+@media (width <= 375px) {
+	html {
+		font-size: calc(1vw / 3.75);
+	}
+}

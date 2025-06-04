@@ -1,10 +1,4 @@
-import {
-	PropsWithChildren,
-	ReactNode,
-	useEffect,
-	useRef,
-	useState
-} from 'react';
+import { PropsWithChildren, ReactNode, useState } from 'react';
 import clsx from 'clsx';
 
 import { SvgIcon } from '@shared/ui';
@@ -17,17 +11,7 @@ interface Props extends PropsWithChildren {
 }
 
 export const Accordion = ({ className, title, children }: Props) => {
-	const contentRef = useRef<HTMLDivElement>(null);
 	const [isOpen, setIsOpen] = useState<boolean>(false);
-	const [height, setHeight] = useState(0);
-
-	useEffect(() => {
-		if (isOpen && contentRef.current) {
-			setHeight(contentRef.current.scrollHeight);
-		} else {
-			setHeight(0);
-		}
-	}, [isOpen, contentRef]);
 
 	const toggleAccordion = () => {
 		setIsOpen(prev => !prev);
@@ -58,11 +42,9 @@ export const Accordion = ({ className, title, children }: Props) => {
 				</button>
 			</header>
 			<div
-				className={styles.accordion__body}
-				ref={contentRef}
-				style={{
-					maxHeight: `${height}rem`
-				}}
+				className={clsx(styles.accordion__body, {
+					[styles['accordion__body--active']]: isOpen
+				})}
 			>
 				<div className={styles.accordion__content}>{children}</div>
 			</div>
