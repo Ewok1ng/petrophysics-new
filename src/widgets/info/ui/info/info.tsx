@@ -131,12 +131,35 @@ export const Info = () => {
 						<li className={styles.info__list_item}>
 							<Accordion key={2} title="Подать тезисы">
 								<div className={styles.deadline}>
-									Участникам, желающим представить свои доклады на конференции
+									<p>
+										Участникам, желающим представить свои доклады на конференции
+										«Петрофизика 21», необходимо <b>до 01.08.2025</b> пройти
+										регистрацию и отправить тезисы на сайте <b>Геомодель</b>.
+									</p>
+									<p>
+										По вопросам регистрации можно обращаться -{' '}
+										<a href="mailto:registration@geomodel.ru">
+											<b>registration@geomodel.ru.</b>
+										</a>
+									</p>
+									<p>
+										По вопросам подачи тезисов -{' '}
+										<a href="mailto:events@geomodel.ru">
+											<b>events@geomodel.ru.</b>
+										</a>
+									</p>
+									<p>
+										По общим организационным вопросам -{' '}
+										<a href="mailto:pp21.conf@yandex.ru">
+											<b>pp21.conf@yandex.ru</b>
+										</a>
+									</p>
+									{/* Участникам, желающим представить свои доклады на конференции
 									«Петрофизика 21», необходимо <b>до 01.08.2025</b> пройти
 									регистрацию (<b>registration@geomodel.ru</b>) и отправить
 									тезисы в организационный комитет по почтe
 									<b> events@geomodel.ru</b>
-									или на сайте <b>Геомодель</b>.
+									или на сайте <b>Геомодель</b>. */}
 								</div>
 								<div className={styles.links}>
 									<Link

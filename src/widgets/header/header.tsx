@@ -57,9 +57,13 @@ export const Header = () => {
 									styles['menu__list_item--multiple']
 								)}
 							>
-								<a className={styles.menu__list_link} href="/#contacts">
-									Контакты
-								</a>
+								<Link
+									className={styles.menu__list_link}
+									to="https://t.me/pp21_conf"
+									target="_blank"
+								>
+									@pp21_conf
+								</Link>
 								<Link
 									className={styles.menu__list_link}
 									to="https://api.whatsapp.com/send/?phone=79520369998"
