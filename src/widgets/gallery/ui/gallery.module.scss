@@ -34,12 +34,12 @@
 	}
 
 	&__items {
-		display: flex;
-		align-items: center;
+		display: grid;
+		grid-template-columns: repeat(12, auto);
 	}
 
 	&__image {
-		height: 300rem;
+		height: 250rem;
 		object-fit: cover;
 		object-position: top center;
 	}
