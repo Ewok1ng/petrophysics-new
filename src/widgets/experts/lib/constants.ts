@@ -4,6 +4,7 @@ import exp2 from '@shared/assets/images/experts/exp-2.png';
 import exp3 from '@shared/assets/images/experts/exp-3.png';
 import exp4 from '@shared/assets/images/experts/exp-4.png';
 import exp5 from '@shared/assets/images/experts/exp-5.png';
+import exp6 from '@shared/assets/images/experts/exp-6.png';
 import exp8 from '@shared/assets/images/experts/exp-8.png';
 import exp9 from '@shared/assets/images/experts/exp-9.png';
 import exp10 from '@shared/assets/images/experts/exp-10.png';
@@ -12,6 +13,8 @@ import exp14 from '@shared/assets/images/experts/exp-14.png';
 import exp15 from '@shared/assets/images/experts/exp-15.png';
 import exp16 from '@shared/assets/images/experts/exp-16.png';
 import exp17 from '@shared/assets/images/experts/exp-17.png';
+import exp18 from '@shared/assets/images/experts/exp-18.png';
+import exp19 from '@shared/assets/images/experts/exp-19.png';
 
 import { IExpert } from './types';
 
@@ -21,14 +24,14 @@ export const MAIN_EXPERTS: readonly IExpert[] = [
 		title: 'Беляков Евгений',
 		description:
 			'Руководитель по развитИю дисциплины «Петрофизика» НТЦ «Газпром нефти»',
-		imageSrc: ''
+		imageSrc: exp18
 	},
 	{
 		id: 2,
 		title: 'Яценко Владислав ',
 		description:
 			'Заместитель начальника управления геолого- гидродинамического моделирования и экспертизы ПАО «Роснефть»',
-		imageSrc: ''
+		imageSrc: exp5
 	}
 ];
 
@@ -44,7 +47,7 @@ export const EXPERTS: readonly IExpert[] = [
 		id: 6,
 		title: 'Арсибеков Антон',
 		description: 'Руководитель отдела, эксперт по рок-физике ООО «ТКШ»',
-		imageSrc: ''
+		imageSrc: exp6
 	},
 	{
 		id: 10,
@@ -137,15 +140,15 @@ export const EXPERTS: readonly IExpert[] = [
 		imageSrc: exp2
 	},
 	{
+		id: 19,
+		title: 'Чашков Анатолий',
+		description: 'Эксперт по петрофизике ПАО «НОВАТЭК»',
+		imageSrc: exp19
+	},
+	{
 		id: 16,
 		title: 'Шуматбаев Кирилл',
 		description: 'Главный эксперт ДРМ СП «Татнефть-Добыча» «ТатНИПИнефть»',
 		imageSrc: exp16
-	},
-	{
-		id: 5,
-		title: 'Яценко Владислав',
-		description: 'Заместитель начальника управления ПАО «Роснефть»',
-		imageSrc: exp5
 	}
 ];

@@ -8,6 +8,7 @@ import { Info } from '@widgets/info';
 import { Conferences } from '@widgets/conferences';
 import { Footer } from '@widgets/footer';
 import { Directions } from '@widgets/directions';
+import { Gallery } from '@widgets/gallery';
 
 import styles from './main.module.scss';
 
@@ -21,6 +22,7 @@ export const Main = () => {
 				<Directions />
 				<Registration />
 				<Partners />
+				<Gallery />
 				<Registration />
 				<Info />
 				<Conferences />
