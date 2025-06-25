@@ -7,7 +7,6 @@ import exp5 from '@shared/assets/images/experts/exp-5.png';
 import exp6 from '@shared/assets/images/experts/exp-6.png';
 import exp8 from '@shared/assets/images/experts/exp-8.png';
 import exp9 from '@shared/assets/images/experts/exp-9.png';
-import exp10 from '@shared/assets/images/experts/exp-10.png';
 import exp13 from '@shared/assets/images/experts/exp-13.png';
 import exp14 from '@shared/assets/images/experts/exp-14.png';
 import exp15 from '@shared/assets/images/experts/exp-15.png';
@@ -15,6 +14,7 @@ import exp16 from '@shared/assets/images/experts/exp-16.png';
 import exp17 from '@shared/assets/images/experts/exp-17.png';
 import exp18 from '@shared/assets/images/experts/exp-18.png';
 import exp19 from '@shared/assets/images/experts/exp-19.png';
+import exp20 from '@shared/assets/images/experts/exp-20.png';
 
 import { IExpert } from './types';
 
@@ -51,9 +51,9 @@ export const EXPERTS: readonly IExpert[] = [
 	},
 	{
 		id: 10,
-		title: 'Береснев Антон',
-		description: 'Главный эксперт по петрофизике ООО «Сахалинская Энергия»',
-		imageSrc: exp10
+		title: 'Бате Лейла',
+		description: 'Ведущему специалисту МГУ имени М.В. Ломоносова',
+		imageSrc: exp20
 	},
 	{
 		id: 16,
