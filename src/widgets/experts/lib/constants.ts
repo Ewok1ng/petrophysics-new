@@ -52,7 +52,7 @@ export const EXPERTS: readonly IExpert[] = [
 	{
 		id: 10,
 		title: 'Бате Лейла',
-		description: 'Ведущему специалисту МГУ имени М.В. Ломоносова',
+		description: 'Ведущий специалист МГУ имени М.В. Ломоносова',
 		imageSrc: exp20
 	},
 	{
